@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ritengzhang77-max.github.io/sitemap.xml
