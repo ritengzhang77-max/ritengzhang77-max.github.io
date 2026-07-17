@@ -1,183 +1,687 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riteng (Gavin) Zhang</title>
-    <meta name="description" content="Riteng (Gavin) Zhang is an AI/ML researcher focused on mechanistic interpretability, model understanding, trustworthy machine learning, and AI-assisted knowledge extraction.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://ritengzhang77-max.github.io/">
-    <meta property="og:title" content="Riteng (Gavin) Zhang">
-    <meta property="og:description" content="AI/ML researcher focused on mechanistic interpretability, model understanding, trustworthy machine learning, and AI-assisted knowledge extraction.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ritengzhang77-max.github.io/">
-    <meta property="og:image" content="https://ritengzhang77-max.github.io/assets/profile.jpeg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Riteng (Gavin) Zhang">
-    <meta name="twitter:description" content="AI/ML researcher focused on mechanistic interpretability, model understanding, trustworthy machine learning, and AI-assisted knowledge extraction.">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Riteng (Gavin) Zhang",
-      "alternateName": ["Riteng Zhang", "Gavin Zhang"],
-      "url": "https://ritengzhang77-max.github.io/",
-      "image": "https://ritengzhang77-max.github.io/assets/profile.jpeg",
-      "email": "mailto:ritengzhang77@gmail.com",
-      "jobTitle": "AI/ML Researcher",
-      "sameAs": [
-        "https://github.com/ritengzhang77-max"
-      ],
-      "knowsAbout": [
-        "Mechanistic interpretability",
-        "Machine learning interpretability",
-        "Trustworthy machine learning",
-        "AI safety",
-        "Foundation model evaluation",
-        "AI-assisted knowledge extraction"
-      ]
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Riteng (Gavin) Zhang — AI/ML research and projects</title>
+<meta name="description" content="Riteng (Gavin) Zhang is a Purdue ECE PhD student researching LLM interpretability and a co-founder of Blossoms AI and School Brain."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://ritengzhang77-max.github.io/"/>
+<meta property="og:title" content="Riteng (Gavin) Zhang — AI/ML research and projects"/>
+<meta property="og:description" content="Purdue ECE PhD student researching LLM interpretability; co-founder of Blossoms AI and School Brain."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ritengzhang77-max.github.io/"/>
+<meta property="og:image" content="https://ritengzhang77-max.github.io/assets/profile.jpeg"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Riteng (Gavin) Zhang — AI/ML research and projects"/>
+<meta name="twitter:description" content="Purdue ECE PhD student researching LLM interpretability; co-founder of Blossoms AI and School Brain."/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Riteng (Gavin) Zhang",
+  "alternateName": ["Riteng Zhang", "Gavin Zhang"],
+  "url": "https://ritengzhang77-max.github.io/",
+  "image": "https://ritengzhang77-max.github.io/assets/profile.jpeg",
+  "email": "zhan5982@purdue.edu",
+  "jobTitle": "PhD Student and AI Researcher",
+  "affiliation": [
+    {"@type": "CollegeOrUniversity", "name": "Purdue University"},
+    {"@type": "Organization", "name": "Blossoms AI"},
+    {"@type": "Organization", "name": "School Brain"}
+  ],
+  "sameAs": ["https://github.com/ritengzhang77-max"],
+  "knowsAbout": ["Mechanistic interpretability", "LLM interpretability", "AI safety", "Modular neural networks"]
+}
+</script>
+<style>
+    /* Production V2: academic single-page navigation with public-safe research
+       and product evidence. */
+    :root {
+      --text: #494e52;
+      --heading: #313537;
+      --muted: #6b7379;
+      --link: #24758f;
+      --line: #edf0f2;
+      --line-dark: #d6d6d6;
+      --bg: #fff;
+      --soft: #f7f8f9;
+      --soft-blue: #eef8fb;
+      --soft-gold: #fff8db;
+      --accent2: #7856ff;
+      --max: 1180px;
     }
-    </script>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        h2 {
-            color: #333333; /* Dark gray color for non-link titles */
-        }
-        h2 a {
-            color: blue; /* Blue color for linked titles */
-        }
-    </style>
-</head>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .masthead { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px); }
+    .masthead-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .site-title { font-size: 19px; font-weight: 800; color: var(--heading); letter-spacing: -0.02em; }
+    nav { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .035em; }
+    nav a { color: #5f666c; }
+    .layout {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 36px 24px 70px;
+      display: grid;
+      grid-template-columns: 255px minmax(0, 1fr);
+      gap: 54px;
+    }
+    aside { font-size: 15px; }
+    .avatar {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 18px;
+      border: 1px solid var(--line-dark);
+    }
+    .author-name { color: var(--heading); font-size: 24px; line-height: 1.08; margin: 0 0 8px; font-weight: 800; }
+    .author-title { margin: 0 0 16px; color: var(--muted); }
+    .author-links { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
+    .author-links li { color: var(--muted); display: grid; gap: 1px; }
+    .sidebar-label { color: #606a70; font-size: 10px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .email-display { color: var(--heading); font-weight: 750; overflow-wrap: anywhere; }
+    .contact-display { margin: 4px 0 0; color: var(--muted); }
+    .sidebar-note { border-top: 1px solid var(--line); margin-top: 22px; padding-top: 16px; color: var(--muted); font-size: 14px; }
+    .sidebar-note strong { display: block; color: #606a70; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 7px; }
+    .sidebar-note span { display: block; margin-top: 5px; }
+    main { min-width: 0; }
+    section { scroll-margin-top: 84px; }
+    h1, h2, h3 { color: var(--heading); line-height: 1.2; }
+    h1 { font-size: 31px; margin: 0 0 18px; letter-spacing: -.02em; }
+    h2 { font-size: 24px; margin: 42px 0 15px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+    h3 { font-size: 18px; margin: 0 0 6px; }
+    p { margin: 0 0 15px; }
+    ul { margin-top: 8px; }
+    .notice {
+      background: var(--soft-gold);
+      border: 1px solid #e7cf74;
+      border-radius: 6px;
+      padding: 12px 14px;
+      color: #665700;
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+    .intro { font-size: 18px; color: #3f4448; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 4px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 5px; padding: 8px 12px; background: var(--link); color: white;
+      font-weight: 800; font-size: 14px;
+    }
+    .btn.secondary { background: #6f777d; }
+    .btn.ghost { background: white; color: var(--heading); border: 1px solid var(--line-dark); }
+    .btn:hover { text-decoration: none; filter: brightness(.96); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px; }
+    .chip { border: 1px solid var(--line-dark); background: var(--soft); border-radius: 999px; padding: 4px 10px; font-size: 13px; color: #555; font-weight: 650; }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .two-col > * { min-width: 0; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      padding: 16px;
+      box-shadow: 0 8px 22px rgba(49,53,55,.035);
+    }
+    .card.highlight { background: linear-gradient(180deg, #ffffff 0%, var(--soft-blue) 100%); border-color: #d5edf4; }
+    .card.wide-card { grid-column: 1 / -1; }
+    .technical-note { margin-top: 12px; padding: 11px 13px; border-left: 3px solid var(--accent2); background: rgba(255,255,255,.78); color: #4d565c; font-size: 13px; line-height: 1.45; }
+    .eyebrow { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; font-weight: 800; margin-bottom: 7px; }
+    .compact-list { padding-left: 20px; margin: 0 0 12px; }
+    .compact-list li { margin: 5px 0; }
+    .project-list { display: grid; gap: 18px; }
+    .project {
+      display: grid; grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.4fr); gap: 22px;
+      padding-bottom: 18px; border-bottom: 1px solid var(--line);
+    }
+    .thumb {
+      width: 118px; min-height: 88px; background: linear-gradient(135deg, #e8f4f8, #f7f8f9);
+      border: 1px solid var(--line-dark); border-radius: 7px; display: flex;
+      align-items: center; justify-content: center; color: var(--muted);
+      font-size: 12px; text-align: center; padding: 8px; font-weight: 800;
+    }
+    .thumb.purple { background: linear-gradient(135deg, #f0ecff, #fbfaff); color: #5b45b6; }
+
+    .demo-img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 8px; border: 1px solid var(--line-dark); background: #fff; display: block; cursor: zoom-in; }
+    .project-media { display: grid; gap: 7px; align-content: start; }
+    .caption { color: var(--muted); font-size: 12px; line-height: 1.35; text-align: center; }
+    main img { cursor: zoom-in; }
+
+    .screenshot-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
+    .screenshot-strip figure { margin: 0; }
+    .screenshot-strip figure:first-child { grid-column: 1 / -1; }
+    .compact-filmstrip { display: flex; gap: 10px; margin: 12px 0 0; overflow-x: auto; padding: 2px 2px 8px; scroll-snap-type: x proximity; }
+    .compact-filmstrip figure { flex: 0 0 225px; margin: 0; scroll-snap-align: start; }
+    .compact-filmstrip img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--line-dark); border-radius: 7px; background: #fff; display: block; }
+    .compact-filmstrip figcaption { color: var(--muted); font-size: 11px; line-height: 1.3; margin-top: 5px; }
+    .screenshot-strip figure:nth-child(2):last-child { grid-column: 1 / -1; }
+    .screenshot-strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: top center; border-radius: 8px; border: 1px solid var(--line-dark); background: #fff; display: block; cursor: zoom-in; }
+    .screenshot-strip figure:first-child img { aspect-ratio: 16 / 10; }
+    .screenshot-strip figcaption { color: var(--muted); font-size: 12px; line-height: 1.3; margin-top: 5px; text-align: center; }
+    .card-visual { margin: 14px 0 10px; }
+    .card-visual img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: top center; border-radius: 9px; border: 1px solid var(--line-dark); background: #fff; display: block; cursor: zoom-in; }
+    .visual-placeholder { min-height: 190px; margin: 14px 0 10px; padding: 18px; border: 1px dashed #aebdc3; border-radius: 9px; background: #fff; display: flex; flex-direction: column; justify-content: center; gap: 6px; color: var(--muted); text-align: center; }
+    .visual-placeholder strong { color: var(--heading); }
+    .image-help { margin: 10px 0 2px; color: var(--muted); font-size: 13px; }
+    .image-lightbox { width: min(96vw, 1500px); max-width: none; border: 0; border-radius: 12px; padding: 0; background: #11161a; color: #fff; box-shadow: 0 28px 90px rgba(0,0,0,.45); }
+    .image-lightbox::backdrop { background: rgba(12,16,20,.88); }
+    .image-lightbox-inner { position: relative; padding: 50px 18px 18px; }
+    .image-lightbox img { display: block; width: 100%; max-height: 84vh; object-fit: contain; background: #fff; border-radius: 8px; cursor: default; }
+    .image-lightbox-caption { margin: 10px 4px 0; color: #d8dee3; font-size: 14px; text-align: center; }
+    .image-lightbox-close { position: absolute; top: 10px; right: 14px; border: 1px solid #66727b; border-radius: 999px; background: #20282e; color: #fff; width: 34px; height: 34px; font-size: 22px; line-height: 1; cursor: pointer; }
+    .cover-review { margin-top: 16px; padding: 14px; border: 1px dashed var(--line-dark); border-radius: 10px; background: var(--soft); }
+    .cover-review-title { margin: 0 0 10px; color: var(--heading); font-size: 14px; font-weight: 800; }
+    .cover-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .cover-options figure { margin: 0; }
+    .cover-options a { display: block; }
+    .cover-options img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; border: 1px solid var(--line-dark); background: #fff; display: block; }
+    .cover-options figcaption { margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .thumb.green { background: linear-gradient(135deg, #e8f7ee, #fbfffd); color: #2e6d4f; }
+    .thumb.blue { background: linear-gradient(135deg, #e7f4ff, #fbfdff); color: #2f668a; }
+    .venue { color: var(--muted); font-size: 14px; margin-bottom: 7px; }
+    .status { display: inline-block; font-size: 12px; font-weight: 800; color: #5f666c; background: #f2f3f3; border-radius: 4px; padding: 2px 6px; margin-right: 6px; }
+    .status.public { color: #25543c; background: #e9f7ef; }
+    .status.demo { color: #245a72; background: #e8f6fb; }
+    .status.placeholder { color: #735f20; background: #fff4c9; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 9px; font-size: 14px; }
+    .links a, .links span { border-bottom: 1px solid transparent; }
+    .placeholder-box { border: 1px dashed var(--line-dark); background: var(--soft); padding: 13px; border-radius: 7px; color: var(--muted); }
+    .small { color: var(--muted); font-size: 14px; }
+    .privacy-note { background: #fbfbfb; border-left: 3px solid var(--accent2); padding: 10px 12px; color: #555; font-size: 14px; margin: 12px 0; }
+    footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+    @media (max-width: 900px) {
+      .masthead { position: static; }
+      .masthead-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+      nav { gap: 14px; }
+      .layout { grid-template-columns: 1fr; gap: 26px; }
+      .avatar { width: 145px; height: 145px; }
+      .two-col { grid-template-columns: 1fr; }
+      .project { grid-template-columns: 1fr; }
+      .screenshot-strip { grid-template-columns: 1fr; }
+      .screenshot-strip figure { grid-column: 1 !important; }
+      .cover-options { grid-template-columns: 1fr; }
+      .thumb { width: 100%; min-height: 70px; }
+    }
+  </style>
+<style>
+.proposal-switcher{position:fixed;z-index:90;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:5px;padding:7px;background:#15283f;color:#fff;border:1px solid #ffffff30;border-radius:10px;box-shadow:0 14px 40px #0b1d3040;font-size:11px;white-space:nowrap}.proposal-switcher b{padding:0 8px;color:#b9cad9}.proposal-switcher a{color:#fff;text-decoration:none;padding:7px 9px;border-radius:6px}.proposal-switcher a:hover{background:#ffffff1c}.showcase-note{border:1px solid #d9e6eb;background:#f3fafb;border-radius:9px;padding:11px 13px;color:#4b6470;font-size:13px;margin:10px 0 18px}.project-tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.project-tags span{font-size:11px;border:1px solid #d7e0e5;background:#f7fafb;border-radius:999px;padding:4px 7px;color:#526672}.showcase-link{display:inline-flex;text-decoration:none;border-radius:7px;padding:9px 12px;background:#163f56;color:#fff;font-weight:750;font-size:12px}.showcase-link.secondary{background:#fff;color:#163f56;border:1px solid #b9cad4}.showcase-media img{width:100%;display:block;border-radius:8px;border:1px solid var(--line-dark);cursor:zoom-in}.showcase-caption{font-size:11px;color:var(--muted);margin-top:6px}.showcase-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:13px}.showcase-button{border:1px solid #b9cad4;background:#fff;color:#163f56;border-radius:7px;padding:8px 11px;font-weight:750;font-size:12px;cursor:pointer}@media(max-width:760px){.proposal-switcher{left:10px;right:10px;transform:none;overflow-x:auto;justify-content:flex-start}.proposal-switcher b{display:none}}
+
+.stage-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:17px 0 12px}.stage-label{font-size:12px;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:#53666f}.stage-play{display:inline-flex;align-items:center;gap:7px;border:1px solid #1b617c;background:#eaf6fa;color:#174a60;border-radius:999px;padding:7px 11px;font:inherit;font-size:12px;font-weight:850;cursor:pointer;box-shadow:0 2px 8px rgba(27,97,124,.12);transition:background .15s ease,border-color .15s ease,color .15s ease,box-shadow .15s ease}.stage-play:hover{background:#d8eff6;box-shadow:0 3px 12px rgba(27,97,124,.2)}.stage-play[aria-pressed="false"]{background:#fff1c7;border-color:#c88713;color:#654600;box-shadow:0 2px 9px rgba(200,135,19,.18)}.stage-play[aria-pressed="false"]:hover{background:#ffe7a5}.stage-selectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px}.stage-select{position:relative;overflow:hidden;min-height:52px;border:1px solid #cddce3;background:#fff;border-radius:9px;padding:9px 10px;text-align:left;cursor:pointer;color:#526671;font:inherit;transition:transform .15s ease,border-color .15s ease,background .15s ease}.stage-select:hover{transform:translateY(-1px);border-color:#7ca9ba;background:#f8fcfd}.stage-select .stage-number{display:block;font-size:10px;line-height:1;font-weight:900;letter-spacing:.08em;color:#5f6f78;margin-bottom:5px}.stage-select .stage-name{display:block;font-size:12px;line-height:1.25;font-weight:800}.stage-select.active{border-color:#1b617c;background:#eaf6fa;color:#183f52;box-shadow:inset 0 0 0 1px #1b617c}.stage-select.active .stage-number{color:#1b617c}.stage-select-progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:#1b617c}.stage-select.active.is-playing .stage-select-progress{animation:stageProgress 10s linear forwards}@keyframes stageProgress{from{width:0}to{width:100%}}.featured-stage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.6fr);gap:28px;align-items:center;background:linear-gradient(135deg,#fff,var(--soft-blue));border:1px solid #d5e5eb;border-radius:12px;padding:17px;transition:opacity .18s ease}.featured-stage.is-changing{opacity:.35}.featured-stage .showcase-media img{aspect-ratio:16/10;object-fit:contain;background:#fff}.stage-copy h3{font-size:29px;margin:7px 0 10px}.stage-copy p{font-size:17px;color:#526671}@media(prefers-reduced-motion:reduce){.stage-select-progress,.skill-select-progress{animation:none!important}.featured-stage,.stage-select,.agent-showcase,.skill-select{transition:none}}@media(max-width:800px){.stage-toolbar{align-items:flex-start}.stage-selectors{display:flex;overflow-x:auto;padding:1px 1px 7px;scroll-snap-type:x proximity}.stage-select{min-width:170px;scroll-snap-align:start}.featured-stage{grid-template-columns:1fr}}
+.skills-repo-actions{margin:12px 0 16px}.skill-selectors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 12px}.skill-select{position:relative;overflow:hidden;min-height:52px;border:1px solid #d7ddec;background:#fff;border-radius:9px;padding:9px 10px;text-align:left;cursor:pointer;color:#58667a;font:inherit;transition:transform .15s ease,border-color .15s ease,background .15s ease}.skill-select:hover{transform:translateY(-1px);border-color:#9484d8;background:#faf9ff}.skill-select .stage-number{display:block;font-size:10px;line-height:1;font-weight:900;letter-spacing:.08em;color:#626b78;margin-bottom:5px}.skill-select .stage-name{display:block;font-size:12px;line-height:1.25;font-weight:800}.skill-select.active{border-color:#6b56bf;background:#f0edff;color:#41328a;box-shadow:inset 0 0 0 1px #6b56bf}.skill-select.active .stage-number{color:#6b56bf}.skill-select-progress{position:absolute;left:0;bottom:0;height:3px;width:0;background:#6b56bf}.skill-select.active.is-playing .skill-select-progress{animation:stageProgress 10s linear forwards}.agent-showcase{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:25px;align-items:center;margin-top:0;border:1px solid #ccd8e3;background:linear-gradient(135deg,#f7f9ff 0%,#fff 55%,#f4f1ff 100%);border-radius:12px;padding:18px;box-shadow:0 16px 34px rgba(31,47,78,.09)}.agent-showcase-media{min-width:0}.agent-showcase-media img{width:100%;max-height:520px;object-fit:contain;display:block;border:1px solid #cbd5df;border-radius:8px;background:#e9edf3;box-shadow:0 10px 24px rgba(27,40,64,.13);cursor:zoom-in}.agent-showcase-media .caption{margin-top:8px;font-size:11px;color:#657384}.agent-showcase-copy .eyebrow{color:#6b56bf}.agent-showcase-copy h3{margin:4px 0 8px;font-family:Georgia,serif;font-size:25px;color:#27364c}.agent-showcase-copy p{margin:0 0 10px}.agent-showcase-copy .showcase-actions{margin-top:12px}@media(max-width:800px){.skill-selectors{grid-template-columns:repeat(2,minmax(0,1fr))}.agent-showcase{grid-template-columns:1fr}.agent-showcase-media img{max-height:none}}@media(prefers-reduced-motion:reduce){.skill-select-progress{animation:none!important}}
+.interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}.interest-panel{border:1px solid var(--line);border-radius:10px;background:#fff;padding:17px 18px}.interest-panel h3{margin:0 0 10px;font-family:Georgia,serif;font-size:19px;color:#2f3b45}.interest-panel .compact-list{margin-bottom:0}.character-panel{background:#fbfcfd}.interest-subgroup h3{margin-bottom:6px;font-size:15px}.interest-subgroup .compact-list{padding-left:18px;font-size:12px;line-height:1.35}.interest-subgroup .compact-list li{margin:3px 0}.interest-subgroup+.interest-subgroup{border-top:1px solid var(--line);margin-top:11px;padding-top:11px}.interest-tags{display:flex;flex-wrap:wrap;gap:8px}.interest-tags span{display:inline-flex;align-items:center;border:1px solid #d6e0e5;background:#f7fafb;border-radius:999px;padding:7px 10px;color:#455963;font-size:12px;line-height:1.25}@media(max-width:700px){.interest-grid{grid-template-columns:1fr}}
+.project.anonymous-project{background:linear-gradient(180deg,#fff 0%,#f8fafb 100%)}.anonymous-cover{width:100%;aspect-ratio:16/9;border:1px solid #d8e0e5;border-radius:9px;background:#f3f6f8;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:34px;filter:blur(6px);opacity:.68;overflow:hidden}.anonymous-cover-line{display:block;height:16px;border-radius:999px;background:#aebbc3}.anonymous-cover-line:nth-child(2){width:82%}.anonymous-cover-line:nth-child(3){width:64%}.anonymous-blur{filter:blur(5px);opacity:.58;user-select:none;pointer-events:none}.anonymous-project .anonymous-blur h3,.anonymous-project h3.anonymous-blur{margin-bottom:10px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+<style>
+/* Draft 009 / V2: compact product evidence and accessible image galleries. */
+.product-gallery{width:100%;min-width:0;max-width:100%;margin:15px 0 10px}.gallery-frame{position:relative;min-width:0;max-width:100%}.gallery-main{width:100%;aspect-ratio:16/10;object-fit:contain;object-position:top center;border:1px solid var(--line-dark);border-radius:9px;background:#fff;display:block;cursor:zoom-in}.gallery-image-tag{position:absolute;z-index:2;left:10px;top:10px;max-width:calc(100% - 20px);padding:6px 8px;border:1px solid rgba(255,255,255,.5);border-radius:6px;background:rgba(18,32,48,.88);box-shadow:0 4px 16px rgba(10,22,35,.18);color:#fff;font-size:9px;line-height:1.2;font-weight:900;letter-spacing:.07em;text-transform:uppercase;pointer-events:none}.gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:9px 0 7px}.gallery-caption{color:var(--muted);font-size:12px;line-height:1.35}.gallery-toggle{flex:0 0 auto;border:1px solid #1b617c;background:#eaf6fa;color:#174a60;border-radius:999px;padding:6px 11px;font:inherit;font-size:12px;font-weight:850;cursor:pointer}.gallery-toggle[aria-pressed="false"]{background:#fff1c7;border-color:#c88713;color:#654600}.gallery-thumbs{display:flex;width:100%;min-width:0;max-width:100%;gap:8px;overflow-x:auto;padding:2px 1px 7px;scroll-snap-type:x proximity}.gallery-thumb{flex:0 0 92px;padding:3px;border:2px solid transparent;border-radius:7px;background:#fff;cursor:pointer;scroll-snap-align:start}.gallery-thumb:hover,.gallery-thumb:focus-visible{border-color:#8ab9ca}.gallery-thumb.active{border-color:#1b617c;background:#eaf6fa}.gallery-thumb img{width:100%;height:55px;object-fit:cover;object-position:top;border-radius:4px;display:block}.gallery-thumb span{display:block;margin-top:3px;color:#58666d;font-size:10px;line-height:1.2;text-align:left}.gallery-thumb.active span{color:#174a60;font-weight:800}.gallery-thumb.is-playing{position:relative;overflow:hidden}.gallery-thumb.is-playing:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:#1b617c;animation:stageProgress 10s linear forwards}
+.stage-play[aria-pressed="true"],.gallery-toggle[aria-pressed="true"]{background:#eaf6fa;border-color:#1b617c;color:#174a60}.stage-play[aria-pressed="true"]:hover,.gallery-toggle[aria-pressed="true"]:hover{background:#d8eff6}.stage-play[aria-pressed="false"],.gallery-toggle[aria-pressed="false"]{background:#fff1c7;border-color:#c88713;color:#654600}.stage-play[aria-pressed="false"]:hover,.gallery-toggle[aria-pressed="false"]:hover{background:#ffe7a5}.featured-stage-v2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.85fr);gap:24px;align-items:start;border:1px solid #d9e6eb;border-radius:11px;background:#fbfdfe;padding:18px;transition:opacity .16s ease}.featured-stage-v2.is-changing{opacity:.55}.stage-gallery-main{width:100%;aspect-ratio:16/10;object-fit:contain;object-position:top center;border:1px solid var(--line-dark);border-radius:9px;background:#fff;display:block;cursor:zoom-in}.stage-copy h3{font-size:21px}.stage-value{font-size:15px;color:#40515a;margin-bottom:13px}.evidence-grid{display:grid;grid-template-columns:1fr;gap:9px;margin:0 0 11px}.evidence-block{border-top:2px solid #d9e6eb;padding-top:8px}.evidence-block h4{margin:0 0 5px;color:#33434b;font-size:12px;text-transform:uppercase;letter-spacing:.045em}.evidence-block p,.evidence-block ul{margin:0;font-size:13px;line-height:1.45}.evidence-block ul{padding-left:17px}.evidence-block li{margin:3px 0}.proof-line{margin:9px 0 12px;padding-left:9px;border-left:2px solid #8fb7c7;color:#52636b;font-size:12px;font-weight:700}.ask-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ask-tile{margin:0}.ask-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;border:1px solid var(--line-dark);border-radius:7px;background:#fff;display:block}.ask-tile figcaption{font-size:10px;color:var(--muted);line-height:1.25;margin-top:3px}.stage-media-note{margin:6px 0 0;color:var(--muted);font-size:11px;line-height:1.35}.stage-select-progress{animation:none!important}.stage-select.active.is-playing .stage-select-progress{animation:stageProgress 10s linear forwards!important}.stage-thumb-progress{height:3px;background:#1b617c;width:0;margin-top:4px;border-radius:2px}.gallery-thumb.active.is-playing .stage-thumb-progress{animation:stageProgress 10s linear forwards}
+@media(max-width:800px){.featured-stage-v2{grid-template-columns:1fr}.evidence-grid{grid-template-columns:1fr}.stage-selectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;padding:0}.stage-select{min-width:0}.skill-selectors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.gallery-thumb{flex-basis:78px}.gallery-thumb img{height:46px}.ask-grid{gap:6px}.featured-stage-v2{padding:12px}.stage-selectors{grid-template-columns:1fr 1fr}.stage-select{padding:7px;min-height:48px}}
+/* Ask the Bus has five evidence states. Keep all five discoverable instead of clipping the last item in the generic horizontal rail. */
+.featured-stage-v2 .gallery-thumbs.ask-evidence-thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible}
+.featured-stage-v2 .ask-evidence-thumbs .gallery-thumb{width:auto;min-width:0;max-width:none;flex:none}
+@media(max-width:1199px){.featured-stage-v2 .gallery-thumbs.ask-evidence-thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stage-select-progress,.stage-thumb-progress{animation:none!important}.featured-stage-v2{transition:none}}
+</style></head>
 <body>
-<div class="container">
-        <h1>Riteng (Gavin) Zhang</h1>
-        <img src="assets/profile.jpeg" align="left" width="200" height="230" alt="Riteng (Gavin) Zhang">
-        <p>I graduated from Boston College with majors in Mathematics and Computer Science, and a minor in Philosophy. Currently, I serve as the Chief AI Officer (CAIO) at Blossoms AI, an educational technology startup I co-founded. I am deeply passionate about ML/AI interpretability.</p>
-        
-        <p>All my specific research interests listed in Section Research Interests align with my main guiding causes: first, to design AI systems that are inherently interpretable and modular, with planned, explainable behavior and capabilities. Second, I wish to develop Microscope AI Systems to assist us in other academic fields by training models and exploring the knowledge they have learned, which we don't yet know, using interpretability.</p>
-        
-        <p>Beyond AI-related topics, my academic interests encompass history, epistemology, philosophy, theology, education, cosmology, and neuroscience. The dynamic interplay of these fields inspires helpful insights and whimsical dreams in both my industrial and academic life.</p>
-        
-        <p>I am pursuing a PhD in the AI/ML field during the 2024/2025 application term. Please feel free to reach out.</p>
-        
-        <br clear="all"/>
+<header class="masthead">
+<div class="masthead-inner">
+<a class="site-title" href="#top">Riteng (Gavin) Zhang</a>
+<nav aria-label="Main navigation">
+<a href="#awards">Awards</a>
+<a href="#research-projects">Research</a>
+<a href="#blossoms">Blossoms</a>
+<a href="#schoolbrain">School Brain</a>
+<a href="#skills">Agent Skills</a>
+<a href="#teaching">Teaching</a>
+</nav>
+</div>
+</header>
+<div class="layout" id="top">
+<aside>
+<img alt="Riteng (Gavin) Zhang" class="avatar" src="assets/profile.jpeg"/>
+<h1 class="author-name">Riteng (Gavin) Zhang</h1>
+<p class="author-title">PhD Student · Purdue ECE</p>
+<ul class="author-links">
+<li><span class="sidebar-label">Purdue email</span><span class="email-display">zhan5982@purdue.edu</span></li>
+<li><span class="sidebar-label">Profile</span><a href="https://github.com/ritengzhang77-max" rel="noopener noreferrer" target="_blank">GitHub</a></li>
 
+</ul>
+<div class="sidebar-note"><strong>Affiliations</strong><span>Blossoms AI · Co-founder</span><span>School Brain · Co-founder</span></div>
+</aside>
+<main>
+<section id="about">
+<h1>About</h1>
+<p>I am currently a second-year PhD student in Purdue ECE, advised by Xiaoqian (Joy) Wang, working on LLM interpretability. I am also a co-founder of Blossoms AI and School Brain.</p>
+<p>I earned B.A. degrees in Computer Science and Mathematics, with a minor in Philosophy, from Boston College. During my undergraduate studies, I was advised by Professors Emily Prud’hommeaux, Sergio Alvarez, Yuan Yuan, and Maira Marques Samary.</p>
+<p class="contact-display"><strong>Email:</strong> <span class="email-display">zhan5982@purdue.edu</span></p>
+</section>
+<section id="interests">
+<h2>Interests</h2>
+<div class="interest-grid">
+<article class="interest-panel research-panel">
+<h3>AI/ML research</h3>
+<ul class="compact-list">
+<li><strong>Mechanistic interpretability</strong></li>
+<li><strong>LLM interpretability</strong></li>
+<li><strong>AI safety</strong></li>
+<li><strong>Modular neural networks</strong></li>
+</ul>
+</article>
+<article class="interest-panel character-panel">
+<div class="interest-subgroup">
+<h3>Philosophy</h3>
+<ul class="compact-list">
+<li><strong>Epistemology</strong></li>
+<li><strong>Philosophy of science</strong></li>
+<li><strong>Philosophy of religion</strong></li>
+<li><strong>Postmodernism</strong></li>
+</ul>
+</div>
+<div class="interest-subgroup">
+<h3>History</h3>
+<ul class="compact-list">
+<li><strong>Chinese history</strong></li>
+<li><strong>Roman history</strong></li>
+<li><strong>Medieval history</strong></li>
+<li><strong>Mughal history</strong></li>
+<li><strong>Safavid history</strong></li>
+<li><strong>Ottoman history</strong></li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<section id="awards">
+<h2>Awards &amp; Achievements</h2>
+<ul class="compact-list">
+<li><strong>John McCarthy, S.J., Award for Natural Science</strong> — Boston College, May 2024. Awarded annually to one student for the best senior thesis in Natural Science.</li>
+<li><strong>Neuhauser Award</strong> — Boston College Computer Science, May 2024. Awarded annually to 1–2 Computer Science students receiving exceptional recognition from faculty.</li>
+<li><strong>Scholar of the College</strong> — Boston College, May 2024. Awarded to exceptional students who completed substantial, high-quality independent work under faculty supervision.</li>
+</ul>
+</section>
+<section id="research-projects">
+<h2>Research Projects</h2>
+<div class="project-list">
+<article class="project anonymous-project" aria-label="Research work in review for NeurIPS 2026; title and details withheld">
+<div class="project-media" aria-hidden="true">
+<div class="anonymous-cover"><span class="anonymous-cover-line"></span><span class="anonymous-cover-line"></span><span class="anonymous-cover-line"></span></div>
+<div class="caption anonymous-blur">Research visual withheld during peer review.</div>
+</div>
+<div>
+<h3 class="anonymous-blur" aria-hidden="true">Research title withheld during peer review</h3>
+<div class="venue"><span class="status public">in review</span> NeurIPS 2026</div>
+<p class="anonymous-blur" aria-hidden="true">Research summary and project details are withheld while the work is under review.</p>
+<span class="sr-only">Title and details withheld during review.</span>
+</div>
+</article>
+<article class="project anonymous-project" aria-label="Research work in review for AAAI 2027; title and details withheld">
+<div class="project-media" aria-hidden="true">
+<div class="anonymous-cover"><span class="anonymous-cover-line"></span><span class="anonymous-cover-line"></span><span class="anonymous-cover-line"></span></div>
+<div class="caption anonymous-blur">Research visual withheld during peer review.</div>
+</div>
+<div>
+<h3 class="anonymous-blur" aria-hidden="true">Research title withheld during peer review</h3>
+<div class="venue"><span class="status public">in review</span> AAAI 2027</div>
+<p class="anonymous-blur" aria-hidden="true">Research summary and project details are withheld while the work is under review.</p>
+<span class="sr-only">Title and details withheld during review.</span>
+</div>
+</article>
+<article class="project">
+<div class="project-media">
+<img alt="Values connected through internal model features to concrete action choices" class="demo-img" src="assets/value-action-cover-a-decision-bridge.png"/>
+<div class="caption">How values may connect to internal features and concrete choices.</div>
+</div>
+<div>
+<h3>Value Action: from abstract values to concrete choices</h3>
+<div class="venue"><span class="status public">ongoing research</span> Mechanistic interpretability · language model behavior</div>
+<p>We study how language models translate abstract value preferences into concrete choices. The project connects behavioral experiments with activation-level and causal evidence inside the model.</p>
+<div class="links">
+<a href="/value-action-atlas/" rel="noopener noreferrer" target="_blank">Open the Value Feature Browser</a>
+</div>
+</div>
+</article>
+<article class="project">
+<div class="project-media">
+<img alt="Interpretability methods becoming a formalized reusable toolkit" class="demo-img" src="assets/thesis-cover-a-fai-toolkit.png"/>
+<div class="caption">From individual interpretability methods to a reusable formal toolkit.</div>
+</div>
+<div>
+<h3>A Framework for Formalizing and Automating Interpretability</h3>
+<div class="venue"><span class="status public">academic work</span> Boston College senior thesis · 2024</div>
+<p>My senior thesis introduced the Formalizing and Automating Interpretability Toolkit (FAI), a structured way to describe, compare, select, and implement interpretability methods.</p>
+<div class="links"><a href="https://drive.google.com/file/d/1o4Ds3zE-oLlo7Ho0rgVn8BDt1xZLB0oq/view?usp=sharing" rel="noopener noreferrer" target="_blank">Read the thesis (Google Drive)</a></div>
+</div>
+</article>
+</div>
 
+</section>
+<section id="blossoms">
+<h2>Blossoms AI</h2>
+<p>I co-founded Blossoms AI in 2023 and serve as Chief AI Officer (CAIO). The next generation of education will be AI-native—inevitably—and we are building for it now.</p>
+<div class="two-col">
+<article class="card highlight">
+<div class="eyebrow">Our newest app</div>
+<h3>MenoLearn</h3>
+<p><strong>If you can’t find a good course, it may be because the subject is:</strong></p>
+<ul class="compact-list">
+<li>Too new for an established curriculum</li>
+<li>Too interdisciplinary or specialized for existing resources</li>
+<li>So unfamiliar you don’t even know what questions to ask</li>
+</ul>
+<p><strong>MenoLearn turns anything you want to learn into a course.</strong> Get a deeply researched, well-sourced, comprehensive course—or an organized path of courses—built around your topic.</p>
+<div class="proof-line"><strong>Adoption:</strong> Within two months of release, MenoLearn reached more than 300 users.</div>
+<div class="product-gallery" data-gallery="menolearn" role="region" aria-label="MenoLearn screenshot gallery"></div>
+<p><strong>Coming up:</strong></p>
+<ul class="compact-list">
+<li>Study-companion matching</li>
+<li>Personalized course recommendations</li>
+<li>New social learning features</li>
+<li>Mobile app, now in beta testing</li>
+</ul>
 
-        <h2>📫 Contact Information</h2>
-        <p><strong>ritengzhang77@gmail.com</strong></p>
+<div class="links">
+<a href="https://menolearn.com/" rel="noopener noreferrer" target="_blank">Intro site</a>
+<a href="https://app.menolearn.com/" rel="noopener noreferrer" target="_blank">App</a>
+</div>
+</article>
+<article class="card highlight">
+<div class="eyebrow">Computer science education platform</div>
+<h3>Blossoms CS Learning Management System</h3>
+<p>A course-customized platform for university computer science education.</p>
+<p><strong>Preserves each instructor’s existing course:</strong></p>
+<ul class="compact-list">
+<li>Units, lessons, and textbooks</li>
+<li>Assignments, exams, question banks, and rubrics</li>
+</ul>
+<p><strong>Adds:</strong></p>
+<ul class="compact-list">
+<li>Embedded VS Code–based coding environment</li>
+<li>Code checking</li>
+<li>Adaptive test-script generation</li>
+<li>Rubric-aligned auto-grading</li>
+<li>Contextual hints</li>
+<li>Customized practice generation</li>
+<li>Performance analytics for instructors and students</li>
+</ul>
+<div class="proof-line"><strong>Adoption:</strong> Used by computer science departments at universities in the United States and Canada.</div>
+<div class="product-gallery" data-gallery="lms" role="region" aria-label="Blossoms LMS screenshot gallery"></div>
 
-        <h2>📄 <a href="cv/Gavin_CV.pdf">My CV</a></h2>
+</article>
+</div>
+</section>
+<section id="schoolbrain">
+<h2>School Brain</h2>
+<p>I am a co-founder and the Chief AI Officer (CAIO) of School Brain. We collaborate with school districts—primarily in Florida and Illinois—to build customized transportation and operations products for live workflows.</p>
+<div class="stage-toolbar">
+  <div class="stage-label">Choose a product or image, or let the evidence progress</div>
+  <button class="stage-play" id="stage-play" type="button" aria-pressed="true" aria-label="School Brain automatic rotation"><span aria-hidden="true">Ⅱ</span> Pause</button>
+</div>
+<div class="stage-selectors" role="tablist" aria-label="Choose a School Brain project">
+  <button class="stage-select active" id="stage-tab-video" type="button" data-stage="video" role="tab" aria-selected="true" aria-controls="featured-stage" tabindex="0"><span class="stage-number">01</span><span class="stage-name">Selective Video Redaction</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select" id="stage-tab-workflow" type="button" data-stage="workflow" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">02</span><span class="stage-name">School Transportation Operations</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select" id="stage-tab-trajectory" type="button" data-stage="trajectory" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">03</span><span class="stage-name">GPS Trajectory Matcher</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select" id="stage-tab-ask" type="button" data-stage="ask" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">04</span><span class="stage-name">Ask the Bus</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+</div>
+<article class="featured-stage-v2" id="featured-stage" role="tabpanel" aria-labelledby="stage-tab-video" aria-live="polite">
+  <div id="stage-media"></div>
+  <div class="stage-copy" id="stage-copy"></div>
+</article>
+</section>
+<section id="skills">
+<h2>AI research assistant &amp; reusable skills</h2>
+<p>I use Hermes as an AI research assistant and project collaborator inside Discord. It supports my research, product development, writing, and broader knowledge work. The public repository below collects the reusable skills and artifact workflows that grew out of this work.</p>
+<p class="workflow-line">Discord thread → project context → loaded skill → local files → QA → Thread Canvas</p>
+<div class="showcase-actions skills-repo-actions">
+  <a class="showcase-link" href="https://ritengzhang77-max.github.io/gavin_skill/" target="_blank" rel="noopener noreferrer">Explore the full skill showcase</a>
+  <a class="showcase-link secondary" href="https://github.com/ritengzhang77-max/gavin_skill" target="_blank" rel="noopener noreferrer">Browse the repository</a>
+</div>
+<div class="stage-toolbar skill-toolbar">
+  <div class="stage-label">Choose an example, or let the showcase rotate</div>
+  <button class="stage-play" id="skill-play" type="button" aria-pressed="true" aria-label="Skills automatic rotation"><span aria-hidden="true">Ⅱ</span> Pause rotation</button>
+</div>
+<div class="skill-selectors" role="tablist" aria-label="Choose an agent workflow example">
+  <button class="skill-select active" id="skill-tab-canvas" type="button" data-skill="canvas" role="tab" aria-selected="true" aria-controls="skill-stage" tabindex="0"><span class="stage-number">01</span><span class="stage-name">Thread Canvas</span><span class="skill-select-progress" aria-hidden="true"></span></button>
+  <button class="skill-select" id="skill-tab-paper" type="button" data-skill="paper" role="tab" aria-selected="false" aria-controls="skill-stage" tabindex="-1"><span class="stage-number">02</span><span class="stage-name">Paper Planning</span><span class="skill-select-progress" aria-hidden="true"></span></button>
+  <button class="skill-select" id="skill-tab-artifact" type="button" data-skill="artifact" role="tab" aria-selected="false" aria-controls="skill-stage" tabindex="-1"><span class="stage-number">03</span><span class="stage-name">Interactive Results Presentation</span><span class="skill-select-progress" aria-hidden="true"></span></button>
+  <button class="skill-select" id="skill-tab-deck" type="button" data-skill="deck" role="tab" aria-selected="false" aria-controls="skill-stage" tabindex="-1"><span class="stage-number">04</span><span class="stage-name">PPTX + PDF</span><span class="skill-select-progress" aria-hidden="true"></span></button>
+</div>
+<article class="agent-showcase" id="skill-stage" role="tabpanel" aria-labelledby="skill-tab-canvas">
+  <div class="agent-showcase-media">
+    <img alt="Academic mechanistic-interpretability discussion beside a natural PDF document preview in Research Canvas" id="skill-image" src="assets/thread-canvas-workflow.png"/>
+    <div class="caption" id="skill-caption">A persistent workspace that keeps the discussion, decisions, and linked artifacts together.</div>
+  </div>
+  <div class="agent-showcase-copy">
+    <div class="eyebrow" id="skill-eyebrow">Long research threads → durable working context</div>
+    <h3 id="skill-title">Thread Canvas</h3>
+    <p id="skill-desc">Thread Canvas turns long research conversations into a durable workspace with the discussion, decisions, and artifacts in one place, so important context remains usable after the chat moves on.</p>
+    <div class="project-tags" id="skill-tags"><span>Long-context continuity</span><span>Linked artifacts</span><span>Durable handoff</span></div>
+    <div class="showcase-actions" id="skill-actions"><a class="showcase-link" href="https://ritengzhang77-max.github.io/gavin_skill/demos/thread-canvas-demo.html" target="_blank" rel="noopener noreferrer">Open Thread Canvas example</a></div>
+  </div>
+</article>
+</section>
+<section id="teaching">
+<h2>Teaching</h2>
+<p>At Boston College, I served as a teaching assistant for two upper-level computer science courses. I supported Machine Learning for two semesters.</p>
+<div class="two-col">
+<article class="card">
+<div class="eyebrow">Boston College · Teaching Assistant</div>
+<h3>Machine Learning (CSCI3345.01)</h3>
+<div class="venue">Two semesters · 2023–2024</div>
+<p>Graded assignments, held office hours, and designed selected homework and sample code across both semesters.</p>
+</article>
+<article class="card">
+<div class="eyebrow">Boston College · Teaching Assistant</div>
+<h3>Vision and Learning (CSCI3399.01)</h3>
+<div class="venue">2023–2024</div>
+<p>Graded assignments, held office hours, and organized student presentations.</p>
+</article>
+</div>
+</section>
+<footer>Riteng (Gavin) Zhang · Personal website</footer>
+</main>
+</div>
+<dialog aria-label="Expanded image preview" class="image-lightbox" id="image-lightbox">
+<div class="image-lightbox-inner">
+<button aria-label="Close expanded image" class="image-lightbox-close" type="button">×</button>
+<img alt="" id="image-lightbox-img"/>
+<p class="image-lightbox-caption" id="image-lightbox-caption"></p>
+</div>
+</dialog>
+<script>
+(() => {
+  const dialog=document.getElementById('image-lightbox');
+  const expanded=document.getElementById('image-lightbox-img');
+  const caption=document.getElementById('image-lightbox-caption');
+  const closeButton=dialog.querySelector('.image-lightbox-close');
+  function prepareImage(img){
+    if(img.closest('.gallery-thumb')) return;
+    img.tabIndex=0;img.setAttribute('role','button');img.removeAttribute('aria-label');
+  }
+  function openImage(img,event){
+    if(event)event.preventDefault();
+    expanded.src=img.currentSrc||img.src;expanded.alt=img.alt||'Expanded preview';
+    const figure=img.closest('figure');
+    const figureCaption=figure?.querySelector('figcaption')?.textContent.trim()||'';
+    const nearby=img.parentElement?.querySelector('.caption,.gallery-caption,.stage-media-note')?.textContent.trim()||'';
+    caption.textContent=figureCaption||nearby||img.alt||'';dialog.showModal();
+    window.imageLightboxOpen=true;window.dispatchEvent(new Event('lightboxchange'));
+  }
+  document.querySelectorAll('main img').forEach(prepareImage);
+  document.querySelector('main').addEventListener('click',event=>{
+    if(event.target.closest('.gallery-thumb'))return;
+    const img=event.target.closest('img');
+    if(img)openImage(img,event);
+  });
+  document.querySelector('main').addEventListener('keydown',event=>{const img=event.target.closest('img[role="button"]');if(img&&(event.key==='Enter'||event.key===' '))openImage(img,event)});
+  new MutationObserver(records=>records.forEach(r=>r.addedNodes.forEach(node=>{if(node.nodeType!==1)return;if(node.matches?.('img'))prepareImage(node);node.querySelectorAll?.('img').forEach(prepareImage)}))).observe(document.querySelector('main'),{childList:true,subtree:true});
+  closeButton.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+  dialog.addEventListener('close',()=>{window.imageLightboxOpen=false;window.dispatchEvent(new Event('lightboxchange'))});
+})();
+</script>
+<script>
+const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
 
+const blossomGalleries={
+ menolearn:[
+  {src:'assets/menolearn-course-gallery.png',alt:'MenoLearn course discovery grid with course cards',caption:'Course and learning-path discovery',tag:'Course discovery'},
+  {src:'assets/menolearn-ai-safety-course-reader.png',alt:'MenoLearn course reader with lesson outline and learning content',caption:'Structured course reader',tag:'Structured course reader'},
+  {src:'assets/menolearn-interactive-timeline-activity.png',alt:'MenoLearn interactive timeline within a course lesson',caption:'Interactive timeline activity',tag:'Interactive learning activity'}
+ ],
+ lms:[
+  {src:'assets/blossoms-lms-workspace-vscode-hints.png',alt:'Public Blossoms LMS frontend shell showing an embedded VS Code based student workspace, contextual hints, and test results',caption:'Student workspace with embedded VS Code, hints, and code checks',tag:'Student workspace · VS Code + hints'},
+  {src:'assets/blossoms-lms-course-builder.png',alt:'Public Blossoms LMS frontend shell showing course units organized from professor provided materials',caption:'Course builder preserving professor materials and unit structure',tag:'Course builder · professor materials'},
+  {src:'assets/blossoms-lms-rubric-studio.png',alt:'Public Blossoms LMS frontend shell showing rubric generation grounded in assignment goals and course sources',caption:'Assignment-aligned rubric generation with source traceability',tag:'Rubric studio · assignment aligned'},
+  {src:'assets/blossoms-lms-test-starter-builder.png',alt:'Public Blossoms LMS frontend shell showing generated tests and starter sample code',caption:'Adaptive test cases and starter-code generation',tag:'Test suite · starter code'},
+  {src:'assets/blossoms-lms-autograding-review.png',alt:'Public Blossoms LMS frontend shell showing rubric-level autograding evidence and deduction reasons',caption:'Autograding review with evidence and deduction or no-deduction reasons',tag:'Autograding · evidence + reasons'},
+  {src:'assets/blossoms-lms-instructor-analytics.png',alt:'Public Blossoms LMS frontend shell showing instructor analytics and teaching actions',caption:'Instructor analytics for rubric bottlenecks and retry patterns',tag:'Instructor analytics'},
+  {src:'assets/blossoms-lms-student-progress.png',alt:'Public Blossoms LMS frontend shell showing student mastery, rubric feedback, and recommended practice',caption:'Student progress, rubric feedback, and targeted practice',tag:'Student progress'}
+ ]
+};
+const galleryControllers=[];
+document.querySelectorAll('.product-gallery').forEach(root=>{
+ const items=blossomGalleries[root.dataset.gallery];let index=0;let timer=null;let playing=!motionQuery.matches;let visible=!('IntersectionObserver' in window);
+ root.innerHTML='<div class="gallery-frame"><img class="gallery-main" alt=""><span class="gallery-image-tag" aria-hidden="true"></span></div><div class="gallery-controls"><span class="gallery-caption"></span><button class="gallery-toggle" type="button"></button></div><div class="gallery-thumbs"></div>';
+ const main=root.querySelector('.gallery-main'),tag=root.querySelector('.gallery-image-tag'),caption=root.querySelector('.gallery-caption'),toggle=root.querySelector('.gallery-toggle'),rail=root.querySelector('.gallery-thumbs');
+ rail.innerHTML=items.map((item,i)=>`<button class="gallery-thumb" type="button" data-index="${i}" aria-label="Select ${item.caption}"><img src="${item.src}" alt="${item.alt}"><span>${item.caption}</span></button>`).join('');
+ function render(){
+  const item=items[index];main.src=item.src;main.alt=item.alt;tag.textContent=item.tag||item.caption;caption.textContent=item.caption;
+  rail.querySelectorAll('.gallery-thumb').forEach((button,i)=>{button.classList.toggle('active',i===index);button.setAttribute('aria-pressed',String(i===index))});
+  toggle.setAttribute('aria-pressed',String(playing));toggle.setAttribute('aria-label',`${root.getAttribute('aria-label').replace(' screenshot gallery','')} automatic rotation`);toggle.innerHTML=playing?'<span aria-hidden="true">Ⅱ</span> Pause':'<span aria-hidden="true">▶</span> Play';
+ }
+ function schedule(){clearTimeout(timer);if(playing&&visible&&!window.imageLightboxOpen)timer=setTimeout(()=>{index=(index+1)%items.length;render();schedule()},10000)}
+ function setPlaying(value){playing=value;render();schedule()}
+ rail.addEventListener('click',event=>{const button=event.target.closest('.gallery-thumb');if(!button)return;index=Number(button.dataset.index);setPlaying(false)});
+ toggle.addEventListener('click',()=>setPlaying(!playing));render();schedule();
+ if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule()},{threshold:0.15}).observe(root);
+ window.addEventListener('lightboxchange',schedule);
+ galleryControllers.push({pause:()=>{if(playing)setPlaying(false)}});
+});
 
-        
-        <h2>🔍 Research Interests</h2>
-        <ul>
-            <li>Mechanistic Interpretability</li>
-            <li>Knowledge Extraction from ML Models; AI for Science</li>
-            <li>Deep Learning Model Modularity</li>
-            <li>Interpretability in LLM or advanced Models (Emergent Ability/Behavior)</li>
-            <li>Formalization and Automation of Interpretable ML Systems</li>
-            <li>Neural Architecture Search</li>
-            <li>Transparent, Trustworthy, Robust AI; ML Safety</li>
-        </ul>
+const stageOrder=['video','workflow','trajectory','ask'];
+const stageData={
+ video:{
+  title:'Selective Video Redaction',
+  problem:'Manually finding and redacting specific people across long videos is slow and labor-intensive. Selective Video Redaction automates the process.',
+  technical:['Operator-selected identities','Person segmentation and identity tracking','Selective redaction'],
+  link:'https://schoolbrain.us/video-blur/',action:'Open Selective Video Redaction',
+  images:[{src:'assets/selective-video-redaction-dashboard-public-demo.png',alt:'Selective Video Redaction dashboard with original footage replaced by an unrelated blurred scene for public display',caption:'Public demo with source footage replaced'}]
+ },
+ workflow:{
+  title:'School Transportation Operations',
+  problem:'Driver inspections, mileage, fuel, and incidents otherwise move through disconnected forms and manual re-entry. Our system digitizes operational review and claim-support preparation.',
+  technical:['Validated form-to-relational-record mapping','Route-aware mileage and claim-line aggregation','Source-row drilldowns, exports, and internal approval','Read-only, schema-aware assistant grounded in office data'],
+  images:[
+   {src:'assets/workflow-suite-office-summary-synthetic.png',alt:'Public-safe transportation office summary',caption:'Office summary'},
+   {src:'assets/workflow-suite-route-types-synthetic.png',alt:'Public-safe transportation route-type review',caption:'Route-type review'},
+   {src:'assets/workflow-suite-forms-review-synthetic.png',alt:'Public-safe transportation forms review',caption:'Forms review'},
+   {src:'assets/workflow-suite-driver-form-picker-synthetic.png',alt:'Public-safe driver form picker',caption:'Driver form picker'},
+   {src:'assets/workflow-suite-pretrip-form-synthetic.png',alt:'Public-safe pre-trip inspection form',caption:'Pre-trip inspection'},
+   {src:'assets/workflow-suite-claim-support-synthetic.png',alt:'Public-safe transportation claim-support view',caption:'Claim-support preparation'}]
+ },
+ trajectory:{
+  title:'GPS Trajectory Matcher',
+  problem:'Noisy or partial GPS traces and unreliable labels make run assignment and data-quality review difficult.',
+  technical:['Schedule-window matching','Seven-channel geospatial trajectory representation','Interpretability methods applied to partial-trajectory evaluation','Occlusion-based channel-importance analysis','Data-quality and label-review heuristics'],
+  images:[
+   {src:'assets/trajectory-synthetic-match-demo.png',alt:'Public-safe trajectory match demonstration with illustrative values',caption:'Run-match demonstration'},
+   {src:'assets/trajectory-synthetic-prediction-distribution.png',alt:'Public-safe trajectory prediction distribution with illustrative values',caption:'Prediction review view'}]
+ },
+ ask:{
+  title:'Ask the Bus',
+  problem:'Transportation staff need current answers about rules, forms, and procedures. The knowledge is scattered across official sites, long documents, and state-specific databases. Without reliable retrieval, staff often depend on conferences or professional connections for timely guidance.',
+ technical:['Official-source acquisition across state databases','State-level Source Recall Metric for evaluating source coverage and retrieval performance','Passage retrieval from long PDFs','Specialized parsing for complex tables, forms, and irregular document formats','Transportation-specific ontology construction','Hybrid lexical/embedding retrieval with query expansion','Source reranking across candidate repositories and documents','Form retrieval','Form generation','Page-level, table-level, and form-level citations','Source freshness and confidence checks'],
+ images:[
+   {src:'assets/ask-the-bus-photo-school-crossing-live.png',alt:'Live Ask the Bus answer to a casual driver question with a public-safe school-crossing photo attached',caption:'Photo review · school crossing'},
+   {src:'assets/ask-the-bus-official-checklist-retrieval-live.png',alt:'Live Ask the Bus result retrieving the official Hazardous Walking Site Review Checklist and its sources',caption:'Official checklist retrieval'},
+   {src:'assets/ask-the-bus-form-generation-live.png',alt:'Live Ask the Bus result generating a printable bus-stop walkway safety form with a downloadable PDF',caption:'Printable form generation'},
+   {src:'assets/ask-the-bus-cited-source-preview-live.png',alt:'Live Ask the Bus safety answer with citations and a rendered official source page open in the source drawer',caption:'Cited answer · source preview'},
+   {src:'assets/ask-the-bus-illegal-passing-chart-live.png',alt:'Live Ask the Bus comparison table and bar chart for Florida illegal-passing survey totals',caption:'Survey data analysis · chart'}]
+ }
+};
+const stage=document.getElementById('featured-stage'),stageMedia=document.getElementById('stage-media'),stageCopy=document.getElementById('stage-copy'),playButton=document.getElementById('stage-play'),stageButtons=[...document.querySelectorAll('.stage-select')];
+let currentStage=0,currentStageImage=0,stageTimer=null,stagePlaying=!motionQuery.matches,stageVisible=!('IntersectionObserver' in window);
+function stageCopyMarkup(d){return `<h3>${d.title}</h3><div class="evidence-grid"><section class="evidence-block"><h4>Problem &amp; value</h4><p>${d.problem}</p></section><section class="evidence-block"><h4>Technical highlights</h4><ul>${d.technical.map(t=>`<li>${t}</li>`).join('')}</ul></section></div>${d.link?`<div class="showcase-actions"><a class="showcase-link" target="_blank" rel="noopener noreferrer" href="${d.link}">${d.action}</a></div>`:''}`}
+function stageMediaMarkup(d){
+ const item=d.images[currentStageImage],askThumbClass=stageOrder[currentStage]==='ask'?' ask-evidence-thumbs':'';return `<img class="stage-gallery-main" src="${item.src}" alt="${item.alt}"><div class="gallery-controls"><span class="gallery-caption">${item.caption}</span></div><div class="gallery-thumbs${askThumbClass}">${d.images.map((image,i)=>`<button class="gallery-thumb${i===currentStageImage?' active':''}${i===currentStageImage&&stagePlaying?' is-playing':''}" type="button" data-image="${i}" aria-pressed="${i===currentStageImage}" aria-label="Select ${image.caption}"><img src="${image.src}" alt="${image.alt}"><span>${image.caption}</span><i class="stage-thumb-progress" aria-hidden="true"></i></button>`).join('')}</div>${d.note?`<p class="stage-media-note">${d.note}</p>`:''}`;
+}
+function renderStage(animate=true){
+ const d=stageData[stageOrder[currentStage]];if(animate)stage.classList.add('is-changing');
+ stageMedia.innerHTML=stageMediaMarkup(d);stageCopy.innerHTML=stageCopyMarkup(d);
+ stageButtons.forEach((button,i)=>{const active=i===currentStage;button.classList.toggle('active',active);button.classList.toggle('is-playing',active&&stagePlaying);button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1});
+ stage.setAttribute('aria-labelledby',stageButtons[currentStage].id);
+ playButton.setAttribute('aria-pressed',String(stagePlaying));playButton.setAttribute('aria-label','School Brain automatic rotation');playButton.innerHTML=stagePlaying?'<span aria-hidden="true">Ⅱ</span> Pause':'<span aria-hidden="true">▶</span> Play';
+ if(animate)setTimeout(()=>stage.classList.remove('is-changing'),160);
+}
+function advanceStage(){const d=stageData[stageOrder[currentStage]];if(currentStageImage<d.images.length-1)currentStageImage+=1;else{currentStage=(currentStage+1)%stageOrder.length;currentStageImage=0}renderStage();scheduleStage()}
+function scheduleStage(){clearTimeout(stageTimer);if(stagePlaying&&stageVisible&&!window.imageLightboxOpen)stageTimer=setTimeout(advanceStage,10000)}
+function setStagePlaying(value){stagePlaying=value;renderStage(false);scheduleStage()}
+stageButtons.forEach((button,index)=>{
+ button.addEventListener('click',()=>{currentStage=index;currentStageImage=0;setStagePlaying(false)});
+ button.addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();let next=event.key==='Home'?0:event.key==='End'?stageButtons.length-1:(index+(event.key==='ArrowRight'?1:-1)+stageButtons.length)%stageButtons.length;stageButtons[next].click();stageButtons[next].focus()});
+});
+stageMedia.addEventListener('click',event=>{const button=event.target.closest('.gallery-thumb');if(!button)return;currentStageImage=Number(button.dataset.image);setStagePlaying(false)});
+playButton.addEventListener('click',()=>setStagePlaying(!stagePlaying));
+if('IntersectionObserver' in window)new IntersectionObserver(entries=>{stageVisible=entries[0].isIntersecting;if(stageVisible&&stagePlaying)renderStage(false);scheduleStage()},{threshold:0.1}).observe(document.getElementById('schoolbrain'));
+window.addEventListener('lightboxchange',()=>{if(!window.imageLightboxOpen&&stageVisible&&stagePlaying)renderStage(false);scheduleStage()});
+renderStage(false);scheduleStage();
 
-        <h2>🏆 Awards & Achievements</h2>
-        <ul>
-            <li><strong>John McCarthy, S.J., Award for Natural Science</strong> (Boston College, May 2024): Awarded annually to one student for the best senior thesis (mine is Interpretability Formalizing and Automating Framework) in Natural Science, judged by dean's reviewers and administered by the Morrissey College of Arts and Sciences Dean’s Office.</li>
-            <li><strong>Neuhauser Award</strong> (Boston College, May 2024): Awarded annually to 1-2 students in the Computer Science department at Boston College who achieve the most recognition from all CS faculty.</li>
-            <li><strong>Scholar of the College</strong> (Boston College, May 2024): Awarded to exceptional students who have excelled academically and completed substantial, high-quality independent work under faculty supervision during their senior year.</li>
-        </ul>
-
-        
-        <h2>🤖➕🎓 Startup - <a href="https://blossoms.ai">Blossoms AI</a></h2>
-        <img src="assets/blossoms-ai.png" align="left" width="400" height="150" alt="Blossoms AI">
-        <p>As CAIO and co-founder of Blossoms AI, I am dedicated to transforming education through artificial intelligence. Our mission is to address the shortcomings of the current education system, especially in the age of AI, and to build a new one using AI and other innovative tools. Our application is set to be deployed in several high schools and potentially colleges next semester, helping teachers increase teaching efficiency, and focus on nurturing each student's unique abilities and interests.</p>
-        
-        <p>My roles at Blossoms AI include:</p>
-        <ul>
-            <li>Leading a team of 7 AI engineers (undergrads/grad students across the U.S.) to develop, test, and deploy AI products in education technology.</li>
-            <li>Developed an Intelligent Learning Management System (LIMS) with features such as Auto-Oral Defense, Unlimited Review Quiz System, Masterlytics System, ThinkAid, and Adaptive Extra-Credit Assignment System.</li>
-            <li>Created an AI-driven tool for automated data analysis and reporting, tailored for students, instructors, school administrators, and school districts, with personalized access levels based on user roles.</li>
-            <li>Ensured our products are deployed in several high schools, with beta testing in progress for potential college deployment, aiming to reduce teacher workloads and improve student learning outcomes.</li>
-        </ul>
-        <br clear="all"/>
-
-
-        <h1>Researches</h1>
-        
-        
-        <h2>🧠 Neural Network Knowledge Extraction Project</h2>
-        <img src="assets/neural-knowledge-extraction.jpg" align="left" width="300" height="300" alt="Neural Network Knowledge Extraction">
-        <p>The <strong>Neural Network Knowledge Extraction Project</strong> explores an emerging field at the intersection of machine learning, interpretability, and knowledge discovery. This nascent area aims to leverage techniques from interpretability, symbolic learning, and related domains to extract novel knowledge from trained neural networks - potentially uncovering insights not yet captured by human understanding. While this field is still in its infancy and lacks a formal name, it holds immense promise for advancing our understanding of AI systems and their potential to contribute to human knowledge. This project seeks to contribute to the development of this field by creating prototype techniques and frameworks, paving the way for future advancements in AI-assisted knowledge discovery and interpretation.</p>
-        <br clear="all"/>
-        
-        <h3>Papers under this project:</h3>
-
-        <p><strong>NN Knowledge Extraction - Potential and Challenges</strong><br>
-        This informal proposal/discussion paper aims to systematize and explore the emerging field of neural network knowledge extraction. Rather than a traditional academic paper, it serves as a comprehensive overview and roadmap for this future field. The paper discusses related areas such as interpretability, symbolic reasoning, causality, and information extraction. It presents toy experiments demonstrating potential approaches, and proposes divisions based on types of techniques used, potential outputs, and levels of abstraction in the extracted knowledge. The discussion also covers potential challenges, metrics for evaluation, and other relevant considerations for the field's development. By providing this structured exploration, the paper seeks to lay groundwork for future research and spark discussions in the AI community about the potential of extracting novel knowledge from neural networks.</p>
-            
-        <p><strong>Dissection of Vision Models with Vision Language Models</strong><br>
-        This paper investigates using vision-language models to dissect neural networks trained on visual data. It identifies and describes the key features detected by neurons, aiming to provide a deeper understanding of how visual models interpret and process inputs.</p>
-        
-        <p><strong>Neuron Dissection in Tabular Data Models</strong><br>
-        This work explores using maximally activated inputs, including both natural synthetic data, to interpret neurons in tabular data models. The study reveals the specific patterns and interactions detected by neurons, offering insights into the model's decision-making process.</p>
-        
-        <p><strong>Hierarchical Neural Network Dissection</strong><br>
-        This framework extends neuron-level interpretations to neuron clusters (localized groups of interconnected neurons and their associated weights), circuits, and entire models. It gradually builds understanding by using the information dissected at the neuron level, along with the weights and connection relationships between neurons. The framework aims to translate complex interactions within neural networks into human-understandable language, providing a comprehensive explanation of decision processes at multiple abstraction levels.</p>
-        <br clear="all"/>
-
-        
-        <h2>🌳 Branch Specialization Analysis Project</h2>
-        <img src="assets/branch-specialization.png" align="left" width="300" height="300" alt="Branch Specialization Analysis">
-        <p>The Branch Specialization Analysis Project is a project of my own that will have several stages. Currently, it's in the very early stages with a focus on providing baseline and evaluation metrics for branch specialization consistency and exploring the potential of branch specialization in combining the functional and architectural modularity of deep learning models. Understanding and analyzing branch specialization is crucial for several reasons:</p>
-        <ul style="padding-left: 40px;">
-            <li>It aids in creating more interpretable models, as it becomes clearer what roles different parts of the network are playing.</li>
-            <li>It can lead to more efficient network designs, where unnecessary or redundant branches can be identified and pruned without loss of overall functionality.</li>
-            <li>It provides insights that can be utilized in neural architecture search (NAS) to design optimized and task-specific models.</li>
-        </ul>
-        <br clear="all"/>
-        
-        <h3>Papers under this project:</h3>
-        <p><a href="https://github.com/ritengzhang/Interpretability-of-Inception-and-its-variants"><strong>Analyzing Variations in Branch Attribution in Non-monolithic Models</strong></a> (advised by <a href="https://www.bc.edu/bc-web/schools/mcas/departments/computer-science/people/faculty-directory/sergio-alvarez.html">Professor Sergio Alvarez</a>)</p>
-        <p>This paper investigates the variability in layer feature attribution across different branches in various branched neural networks (monolithic design vs. inception-like). Despite using consistent datasets, model architectures, and hyperparameters, training with different initial parameters leads to differences in neuron roles and contributions. Our focus is on determining whether the monolithic design of branched models will have higher variation in its branch attribution than that of inception-like models or non-monolithic branched neural networks.</p>
-        <br clear="all"/>
-
-        <h2>📖 Formalizing and Automating Interpretability Framework (FAI)</h2>
-        <img src="assets/method-encoding.jpg" align="left" width="300" height="300" alt="Formalizing and Automating Interpretability Framework">
-        <p><a href="https://github.com/ritengzhang/Interpretability-of-neural-language-model-A-survey"><strong>Formalizing and Automating Interpretability Framework (FAI)</strong></a></p>
-        <p>Inspired by interpretability survey papers like "Post-hoc Interpretability for Neural NLP: A Survey," this project introduces the Formalizing and Automating Interpretability Framework (FAI). By encoding interpretability methods into a structured, formal framework, FAI enables automatic systematization and classification, facilitates easier understanding, and allows for automation of method application. This approach establishes a unified representation that captures the essence of deep learning interpretability techniques across various dimensions, such as global vs. local, similar to previous surveys. The project also explores the possibility of generating new methods through innovative approaches, such as generative sequence models (like tree RNNs).</p>
-        <br clear="all"/>
-
-
-    
-        <h2>🔍 LLM-Assisted Framework Series</h2>
-        <img src="assets/llm-assisted-framework.jpg" align="left" width="300" height="300" alt="LLM-Assisted Framework Series">
-        <p>The <strong><a href="https://github.com/ritengzhang/LLM-Supported-Series">LLM-Assisted Framework Series</a></strong> leverages LLMs to enhance traditional methods in various tasks:</p>
-        <ul style="padding-left: 40px;">
-            <li><strong>Bilevel Decison Making Auto Data Analysis Chatbot</strong>: A backend two-step process where LLMs first decide which predefined data analysis functions to call and provide corresponding inputs based on the database schema and user queries. Then, LLMs interpret results to determine the most insightful findings. The chatbot presents users with coherent text explanations and relevant visualizations, with chart placeholders (in Chart.js format) generated within the LLM's output for later replacement. This approach typically yields more coherent and meaningful data analysis than direct LLM-generated results.</li>
-            <li><strong>LLM-Guided Symbolic Regression</strong>: A bilevel optimization framework where LLMs propose formulas and parameter sets, refined through traditional optimization and LLM-based adjustments.</li>
-            <li><strong>LLM-Supported Neural Architecture Search</strong>: LLMs propose model architectures based on input specifications, refining them using interpretability methods and feature attribution feedback.</li>
-        </ul>
-        <br clear="all"/>
-
-
-
-        <h2>✈️ Travel</h2>
-        <ul>
-            <li>ACL 2023</li>
-            <li>NeurIPS 2023</li>
-        </ul>
-
-        <h2>📢 Talk</h2>
-        <p><strong>Understanding LSTM Networks</strong>, Boston College Experimental Math & ML lab, Nov 2023</p>
-
-        <h2>📚 References</h2>
-        <ul>
-            <li>Madsen, Andreas, Siva Reddy, and Sarath Chandar. "<a href="https://arxiv.org/abs/2108.04840">Post-hoc Interpretability for Neural NLP: A Survey</a>." ACM Computing Surveys 55, no. 8 (2022): 1-42.</li>
-            <li>Min, Sewon, et al. "<a href="https://arxiv.org/abs/2202.12837">Rethinking the role of demonstrations: What makes in-context learning work?</a>" arXiv preprint arXiv:2202.12837 (2022).</li>
-            <li>Voss, Chelsea, et al. "<a href="https://distill.pub/2020/circuits/branch-specialization/">Branch Specialization</a>." Distill (2021).</li>
-        </ul>
-    </div>
-</body>
+const skillData={
+ canvas:{eyebrow:'Long research threads → durable working context',title:'Thread Canvas',image:'assets/thread-canvas-workflow.png',alt:'Academic mechanistic-interpretability discussion beside a natural PDF document preview in Research Canvas',caption:'A persistent workspace that keeps the discussion, decisions, and linked artifacts together.',desc:'Thread Canvas turns long research conversations into a durable workspace with the discussion, decisions, and artifacts in one place, so important context remains usable after the chat moves on.',tags:['Long-context continuity','Linked artifacts','Durable handoff'],action:'Open Thread Canvas example',link:'https://ritengzhang77-max.github.io/gavin_skill/demos/thread-canvas-demo.html'},
+ paper:{eyebrow:'Research results → coherent paper structure',title:'Paper Planning',image:'assets/paper-plan-browser.png',alt:'Paper planning browser with section hierarchy, directional-support formula, and evidence table',caption:'A structured plan that keeps sections, claims, equations, tables, and evidence aligned.',desc:'Paper Planning turns research results into a section-by-section manuscript plan, making it clear what each section must argue, what evidence belongs there, and what is still missing before drafting.',tags:['Argument structure','Evidence mapping','Draft readiness'],action:'Open paper-planning example',link:'https://ritengzhang77-max.github.io/gavin_skill/demos/paper-plan-demo.html'},
+ artifact:{eyebrow:'Research results → interactive presentation',title:'Interactive Results Presentation',image:'assets/value-action-feature-atlas.png',alt:'Value Feature Browser shown as an example of an interactive research-results presentation',caption:'A research-results presentation with filters, ranked evidence, and feature-level drill-down views.',desc:'Interactive Results Presentation turns dense experiment outputs into a structured web interface that collaborators can filter, compare, and inspect. The Value Feature Browser shown here is one research-specific example of this reusable presentation format.',tags:['Interactive presentation','Result navigation','Evidence drill-down'],action:'Open Value Feature Browser example',link:'/value-action-atlas/'},
+ deck:{eyebrow:'Research work → presentation-ready delivery',title:'PPTX + PDF Delivery',image:'assets/pptx-pdf-package.png',alt:'Natural PDF viewer showing page two of a four-page academic methods deck',caption:'A verified presentation package with editable slides and a rendered review copy.',desc:'PPTX + PDF Delivery turns research material into an editable deck and a rendered PDF, then checks the final presentation so collaborators receive files they can present, revise, or share immediately.',tags:['Editable slides','Rendered review','Delivery QA'],actions:[{label:'Open PPTX example',href:'https://ritengzhang77-max.github.io/gavin_skill/demos/artifacts/value-mechanism-evidence-deck.pptx'},{label:'Open PDF example',href:'https://ritengzhang77-max.github.io/gavin_skill/demos/artifacts/value-mechanism-evidence-deck.pdf'}]}
+};
+const skillStage=document.getElementById('skill-stage');
+const skillImage=document.getElementById('skill-image');
+const skillCaption=document.getElementById('skill-caption');
+const skillEyebrow=document.getElementById('skill-eyebrow');
+const skillTitle=document.getElementById('skill-title');
+const skillDesc=document.getElementById('skill-desc');
+const skillTags=document.getElementById('skill-tags');
+const skillActions=document.getElementById('skill-actions');
+const skillButtons=[...document.querySelectorAll('.skill-select')];
+const skillPlayButton=document.getElementById('skill-play');
+const skillOrder=['canvas','paper','artifact','deck'];
+let currentSkill=0,skillTimer=null,skillTransitionTimer=null,skillPlaying=!motionQuery.matches,skillVisible=!('IntersectionObserver' in window),skillFocused=false;
+function showSkill(key,animate=true){
+ clearTimeout(skillTransitionTimer);const d=skillData[key];currentSkill=skillOrder.indexOf(key);if(animate)skillStage.classList.add('is-changing');
+ skillTransitionTimer=window.setTimeout(()=>{skillImage.src=d.image;skillImage.alt=d.alt;skillCaption.textContent=d.caption;skillEyebrow.textContent=d.eyebrow;skillTitle.textContent=d.title;skillDesc.textContent=d.desc;skillTags.innerHTML=d.tags.map(t=>'<span>'+t+'</span>').join('');const actions=d.actions||[{label:d.action,href:d.link}];skillActions.innerHTML=actions.map(a=>'<a class="showcase-link" target="_blank" rel="noopener noreferrer" href="'+a.href+'">'+a.label+'</a>').join('');skillButtons.forEach(b=>{const active=b.dataset.skill===key;b.classList.toggle('active',active);b.classList.toggle('is-playing',active&&skillPlaying);b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1});skillStage.setAttribute('aria-labelledby',skillButtons[currentSkill].id);skillStage.classList.remove('is-changing');},animate?150:0);
+}
+function scheduleSkills(){clearTimeout(skillTimer);if(!skillPlaying||!skillVisible||skillFocused||window.imageLightboxOpen)return;skillTimer=setTimeout(()=>{showSkill(skillOrder[(currentSkill+1)%skillOrder.length]);scheduleSkills();},10000)}
+function setSkillPlaying(value){skillPlaying=value;skillPlayButton.setAttribute('aria-pressed',String(skillPlaying));skillPlayButton.setAttribute('aria-label','Skills automatic rotation');skillPlayButton.innerHTML=skillPlaying?'<span aria-hidden="true">Ⅱ</span> Pause rotation':'<span aria-hidden="true">▶</span> Play rotation';showSkill(skillOrder[currentSkill],false);scheduleSkills()}
+skillButtons.forEach((button,index)=>{
+ button.addEventListener('click',()=>{currentSkill=index;setSkillPlaying(false)});
+ button.addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();let next=event.key==='Home'?0:event.key==='End'?skillButtons.length-1:(index+(event.key==='ArrowRight'?1:-1)+skillButtons.length)%skillButtons.length;skillButtons[next].click();skillButtons[next].focus()});
+});
+skillPlayButton.addEventListener('click',()=>setSkillPlaying(!skillPlaying));
+const skillsSection=document.getElementById('skills');
+skillsSection.addEventListener('focusin',()=>{skillFocused=true;clearTimeout(skillTimer)});
+skillsSection.addEventListener('focusout',e=>{if(!skillsSection.contains(e.relatedTarget)){skillFocused=false;scheduleSkills()}});
+if('IntersectionObserver' in window)new IntersectionObserver(entries=>{skillVisible=entries[0].isIntersecting;if(skillVisible&&skillPlaying)showSkill(skillOrder[currentSkill],false);scheduleSkills()},{threshold:0.1}).observe(skillsSection);
+window.addEventListener('lightboxchange',()=>{if(!window.imageLightboxOpen&&skillVisible&&skillPlaying)showSkill(skillOrder[currentSkill],false);scheduleSkills()});
+showSkill(skillOrder[0],false);setSkillPlaying(skillPlaying);
+motionQuery.addEventListener('change',event=>{if(!event.matches)return;galleryControllers.forEach(controller=>controller.pause());if(stagePlaying)setStagePlaying(false);if(skillPlaying)setSkillPlaying(false)});
+</script></body>
 </html>

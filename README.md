@@ -1,19 +1,11 @@
-# Riteng (Gavin) Zhang Personal Website
+# Riteng (Gavin) Zhang — Personal Website
 
-This repository publishes Gavin's personal website and CV through GitHub Pages.
+Permanent site: https://ritengzhang77-max.github.io/
 
-Public site:
+This repository publishes Gavin's research, product, agent-workflow, and teaching portfolio through GitHub Pages.
 
-- https://ritengzhang77-max.github.io/
-
-Local workspace:
-
-- `/data/gavin/profile_website_cv`
-
-Notes:
-
-- `index.html` is the current static homepage.
-- `cv/Gavin_CV.pdf` is the currently linked CV.
-- `assets/` contains local copies of site images, so the site no longer depends on image URLs from the old GitHub account.
-- Larger planning notes, old-site snapshots, and CV history live in the local data workspace, not in this repo.
-
+- `index.html` is the production homepage.
+- `assets/` contains local public-safe portfolio media.
+- `value-action-atlas/` contains a standalone public Value Feature Browser and its guide.
+- `demos/blossoms-lms-showcase/` preserves the public-safe frontend showcase used to generate portfolio evidence.
+- The site intentionally does not publish a CV/resume.
