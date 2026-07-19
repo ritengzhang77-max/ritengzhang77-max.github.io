@@ -34,7 +34,7 @@
       "url": "https://ritengzhang77-max.github.io/",
       "name": "Riteng Zhang (Gavin Zhang) — Purdue ECE PhD Student",
       "description": "The research and product portfolio of Riteng Zhang, also known as Gavin Zhang.",
-      "dateModified": "2026-07-18T06:06:35Z",
+      "dateModified": "2026-07-19T07:10:59Z",
       "mainEntity": {"@id": "https://ritengzhang77-max.github.io/#riteng-zhang"}
     },
     {
@@ -382,7 +382,7 @@
 <div class="caption">How values may connect to internal features and concrete choices.</div>
 </div>
 <div>
-<h3>Value Action: from abstract values to concrete choices</h3>
+<h3>What Models Say vs. How They Act: Mechanistic Interpretability of Value–Action Gaps</h3>
 <div class="venue"><span class="status public">ongoing research</span> Mechanistic interpretability · language model behavior</div>
 <p>We study how language models translate abstract value preferences into concrete choices. The project connects behavioral experiments with activation-level and causal evidence inside the model.</p>
 <div class="links">
@@ -461,18 +461,18 @@
 </section>
 <section id="schoolbrain">
 <h2>School Brain</h2>
-<p>I am a co-founder and the Chief AI Officer (CAIO) of School Brain. We collaborate with school districts—primarily in Florida and Illinois—to build customized transportation and operations products for live workflows.</p>
+<p>I am a co-founder and the Chief AI Officer (CAIO) of School Brain. We collaborate with school districts in Pennsylvania, Illinois, and Florida to build customized transportation and operations products for live workflows.</p>
 <div class="stage-toolbar">
   <div class="stage-label">Choose a product or image, or let the evidence progress</div>
   <button class="stage-play" id="stage-play" type="button" aria-pressed="true" aria-label="School Brain automatic rotation"><span aria-hidden="true">Ⅱ</span> Pause</button>
 </div>
 <div class="stage-selectors" role="tablist" aria-label="Choose a School Brain project">
-  <button class="stage-select active" id="stage-tab-video" type="button" data-stage="video" role="tab" aria-selected="true" aria-controls="featured-stage" tabindex="0"><span class="stage-number">01</span><span class="stage-name">Selective Video Redaction</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select active" id="stage-tab-trajectory" type="button" data-stage="trajectory" role="tab" aria-selected="true" aria-controls="featured-stage" tabindex="0"><span class="stage-number">01</span><span class="stage-name">GPS Trajectory Matcher</span><span class="stage-select-progress" aria-hidden="true"></span></button>
   <button class="stage-select" id="stage-tab-workflow" type="button" data-stage="workflow" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">02</span><span class="stage-name">School Transportation Operations</span><span class="stage-select-progress" aria-hidden="true"></span></button>
-  <button class="stage-select" id="stage-tab-trajectory" type="button" data-stage="trajectory" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">03</span><span class="stage-name">GPS Trajectory Matcher</span><span class="stage-select-progress" aria-hidden="true"></span></button>
-  <button class="stage-select" id="stage-tab-ask" type="button" data-stage="ask" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">04</span><span class="stage-name">Ask the Bus</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select" id="stage-tab-ask" type="button" data-stage="ask" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">03</span><span class="stage-name">Ask the Bus</span><span class="stage-select-progress" aria-hidden="true"></span></button>
+  <button class="stage-select" id="stage-tab-video" type="button" data-stage="video" role="tab" aria-selected="false" aria-controls="featured-stage" tabindex="-1"><span class="stage-number">04</span><span class="stage-name">Selective Video Redaction</span><span class="stage-select-progress" aria-hidden="true"></span></button>
 </div>
-<article class="featured-stage-v2" id="featured-stage" role="tabpanel" aria-labelledby="stage-tab-video" aria-live="polite">
+<article class="featured-stage-v2" id="featured-stage" role="tabpanel" aria-labelledby="stage-tab-trajectory" aria-live="polite">
   <div id="stage-media"></div>
   <div class="stage-copy" id="stage-copy"></div>
 </article>
@@ -609,18 +609,18 @@ document.querySelectorAll('.product-gallery').forEach(root=>{
  galleryControllers.push({pause:()=>{if(playing)setPlaying(false)}});
 });
 
-const stageOrder=['video','workflow','trajectory','ask'];
+const stageOrder=['trajectory','workflow','ask','video'];
 const stageData={
  video:{
   title:'Selective Video Redaction',
-  problem:'Manually finding and redacting specific people across long videos is slow and labor-intensive. Selective Video Redaction automates the process.',
+  problem:'School districts may need to share bus or school video when parents request footage, but other students and bystanders create privacy concerns that can block or delay release. Manually locating and redacting those people across long videos is slow and labor-intensive. Selective Video Redaction lets staff choose who remains visible and automatically redacts the others.',
   technical:['Operator-selected identities','Person segmentation and identity tracking','Selective redaction'],
   link:'https://schoolbrain.us/video-blur/',action:'Open Selective Video Redaction',
   images:[{src:'assets/selective-video-redaction-dashboard-public-demo.png',alt:'Selective Video Redaction dashboard with original footage replaced by an unrelated blurred scene for public display',caption:'Public demo with source footage replaced'}]
  },
  workflow:{
   title:'School Transportation Operations',
-  problem:'Driver inspections, mileage, fuel, and incidents otherwise move through disconnected forms and manual re-entry. Our system digitizes operational review and claim-support preparation.',
+  problem:'Driver inspections, mileage, fuel, and incidents otherwise move through disconnected forms and manual re-entry. Our system digitizes operational review and claim-support preparation and is deployed across multiple Illinois school districts, including Skokie 68.',
   technical:['Validated form-to-relational-record mapping','Route-aware mileage and claim-line aggregation','Source-row drilldowns, exports, and internal approval','Read-only, schema-aware assistant grounded in office data'],
   images:[
    {src:'assets/workflow-suite-office-summary-synthetic.png',alt:'Public-safe transportation office summary',caption:'Office summary'},
@@ -632,7 +632,7 @@ const stageData={
  },
  trajectory:{
   title:'GPS Trajectory Matcher',
-  problem:'Noisy or partial GPS traces and unreliable labels make run assignment and data-quality review difficult.',
+  problem:'Noisy or partial GPS traces and unreliable labels make run assignment and data-quality review difficult. The system is deployed in a Pennsylvania school district with more than 100 schools.',
   technical:['Schedule-window matching','Seven-channel geospatial trajectory representation','Interpretability methods applied to partial-trajectory evaluation','Occlusion-based channel-importance analysis','Data-quality and label-review heuristics'],
   images:[
    {src:'assets/trajectory-synthetic-match-demo.png',alt:'Public-safe trajectory match demonstration with illustrative values',caption:'Run-match demonstration'},
@@ -641,7 +641,7 @@ const stageData={
  ask:{
   title:'Ask the Bus',
   problem:'Transportation staff need current answers about rules, forms, and procedures. The knowledge is scattered across official sites, long documents, and state-specific databases. Without reliable retrieval, staff often depend on conferences or professional connections for timely guidance.',
- technical:['Official-source acquisition across state databases','State-level Source Recall Metric for evaluating source coverage and retrieval performance','Passage retrieval from long PDFs','Specialized parsing for complex tables, forms, and irregular document formats','Transportation-specific ontology construction','Hybrid lexical/embedding retrieval with query expansion','Source reranking across candidate repositories and documents','Form retrieval','Form generation','Page-level, table-level, and form-level citations','Source freshness and confidence checks'],
+ technical:['Official-source acquisition across state databases','State-level Source Recall Metric for evaluating source coverage and retrieval performance','Passage retrieval from long PDFs','Specialized parsing for complex tables, forms, and irregular document formats','Transportation-specific ontology construction','Hybrid lexical/embedding retrieval with query expansion','Source reranking across candidate repositories and documents','Form retrieval','Form generation','Page-level, table-level, and form-level citations','Source freshness and confidence checks','On our internal benchmarks, Ask the Bus outperformed every retrieval system and state-of-the-art large language reasoning model we tested on both accuracy and latency'],
  images:[
    {src:'assets/ask-the-bus-photo-school-crossing-live.png',alt:'Live Ask the Bus answer to a casual driver question with a public-safe school-crossing photo attached',caption:'Photo review · school crossing'},
    {src:'assets/ask-the-bus-official-checklist-retrieval-live.png',alt:'Live Ask the Bus result retrieving the official Hazardous Walking Site Review Checklist and its sources',caption:'Official checklist retrieval'},
