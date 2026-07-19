@@ -34,7 +34,7 @@
       "url": "https://ritengzhang77-max.github.io/",
       "name": "Riteng Zhang (Gavin Zhang) — Purdue ECE PhD Student",
       "description": "The research and product portfolio of Riteng Zhang, also known as Gavin Zhang.",
-      "dateModified": "2026-07-19T07:10:59Z",
+      "dateModified": "2026-07-19T23:12:41Z",
       "mainEntity": {"@id": "https://ritengzhang77-max.github.io/#riteng-zhang"}
     },
     {
@@ -270,6 +270,9 @@
 .featured-stage-v2 .gallery-thumbs.ask-evidence-thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible}
 .featured-stage-v2 .ask-evidence-thumbs .gallery-thumb{width:auto;min-width:0;max-width:none;flex:none}
 @media(max-width:1199px){.featured-stage-v2 .gallery-thumbs.ask-evidence-thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Five MenoLearn states remain simultaneously discoverable in a compact 3+2 grid. */
+.product-gallery[data-gallery="menolearn"] .gallery-thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible}
+.product-gallery[data-gallery="menolearn"] .gallery-thumb{width:auto;min-width:0;max-width:none;flex:none}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stage-select-progress,.stage-thumb-progress{animation:none!important}.featured-stage-v2{transition:none}}
 </style></head>
 <body>
@@ -574,10 +577,11 @@ const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const blossomGalleries={
  menolearn:[
+  {src:'assets/menolearn-interactive-failure-mode-explorer.png',alt:'MenoLearn AI safety course lesson with unit navigation, key concepts, a Mermaid failure-mode flowchart, guided prompts, and a downloadable interactive HTML activity',caption:'AI safety lesson with an interactive failure-mode explorer',tag:'Interactive failure-mode explorer'},
   {src:'assets/menolearn-course-gallery.png',alt:'MenoLearn course discovery grid with course cards',caption:'Course and learning-path discovery',tag:'Course discovery'},
   {src:'assets/menolearn-ai-safety-course-reader.png',alt:'MenoLearn course reader with lesson outline and learning content',caption:'Structured course reader',tag:'Structured course reader'},
   {src:'assets/menolearn-interactive-timeline-activity.png',alt:'MenoLearn interactive timeline within a course lesson',caption:'Interactive timeline activity',tag:'Interactive learning activity'},
-  {src:'assets/menolearn-interactive-failure-mode-explorer.png',alt:'MenoLearn AI safety course lesson with unit navigation, key concepts, a Mermaid failure-mode flowchart, guided prompts, and a downloadable interactive HTML activity',caption:'AI safety lesson with an interactive failure-mode explorer',tag:'Interactive failure-mode explorer'}
+  {src:'assets/menolearn-ai-safety-career-roadmap.png',alt:'MenoLearn career-path planner showing an example AI safety research scientist goal and a sequenced roadmap of courses',caption:'Example career roadmap for AI safety research',tag:'Personalized career roadmap'}
  ],
  lms:[
   {src:'assets/blossoms-lms-workspace-vscode-hints.png',alt:'Public Blossoms LMS frontend shell showing an embedded VS Code based student workspace, contextual hints, and test results',caption:'Student workspace with embedded VS Code, hints, and code checks',tag:'Student workspace · VS Code + hints'},
