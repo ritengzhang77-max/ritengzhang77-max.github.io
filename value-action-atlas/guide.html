@@ -3,85 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guide — Value Feature Browser</title>
-  <meta name="description" content="Guide to the controls, evidence stages, ranked rows, and feature-detail panels in the Value Feature Browser." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ritengzhang77-max.github.io/value-action-atlas/guide.html" />
+  <title>How to Read the Value–Action Feature Atlas</title>
+  <meta name="description" content="A plain-language guide to exploring internal model features associated with value-laden action choices." />
   <style>
-    :root{--ink:#202a36;--muted:#5e6d82;--line:#d6dee8;--surface:#fff;--band:#f3f7fa;--accent:#245fa8;--max:1080px}
-    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:#f7f9fb;font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:var(--accent)}.topbar{background:#fff;border-bottom:1px solid var(--line);padding:24px}.topbar-inner,main{max-width:var(--max);margin:auto}.topbar-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.kicker{margin:0 0 4px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{margin:0;font-size:30px}h2{font-size:23px;margin:0 0 10px}h3{font-size:17px;margin:0 0 7px}.lede{margin:6px 0 0;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.button{display:inline-block;border:1px solid #aebdce;border-radius:999px;padding:8px 13px;background:#fff;font-weight:750;text-decoration:none}.button.primary{background:#153f5d;color:#fff;border-color:#153f5d}main{padding:24px}.hero,.section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 0;padding:0;list-style:none}.steps li,.card{background:var(--band);border:1px solid var(--line);border-radius:10px;padding:15px}.steps strong{display:block;margin-bottom:5px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.control{display:grid;grid-template-columns:160px 1fr;gap:12px;border-top:1px solid var(--line);padding:13px 0}.control:first-child{border-top:0}.control dt{font-weight:800}.control dd{margin:0;color:#445165}.lane-list{display:grid;gap:8px;margin:12px 0 0}.lane{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 12px;background:var(--band);border-radius:8px}.lane strong{color:#174f87}.preview{width:100%;border:1px solid var(--line);border-radius:10px;margin-top:14px}.note{border-left:4px solid #d59822;background:#fff8e7;padding:12px 14px;margin-top:14px}.footer{color:var(--muted);font-size:13px;text-align:center;padding:4px 24px 30px}
-    @media(max-width:720px){.topbar{padding:18px 16px}.topbar-inner{display:block}.actions{margin-top:14px}main{padding:16px}.steps,.grid{grid-template-columns:1fr}.control,.lane{grid-template-columns:1fr;gap:3px}.hero,.section{padding:17px}h1{font-size:25px}}
+    :root{--ink:#202a36;--muted:#5e6d82;--line:#d6dee8;--surface:#fff;--band:#f3f7fa;--accent:#245fa8;--deep:#153f5d;--max:1080px}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:#f7f9fb;font:16px/1.58 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--accent)}.topbar{background:#fff;border-bottom:1px solid var(--line);padding:24px}.topbar-inner,main{max-width:var(--max);margin:auto}.topbar-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.kicker{margin:0 0 5px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{margin:0;font-size:30px;line-height:1.18}h2{font-size:23px;margin:0 0 10px;line-height:1.25}h3{font-size:17px;margin:0 0 7px}.lede{max-width:720px;margin:7px 0 0;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.button{display:inline-block;border:1px solid #aebdce;border-radius:999px;padding:8px 13px;background:#fff;font-weight:750;text-decoration:none}.button.primary{background:var(--deep);color:#fff;border-color:var(--deep)}main{padding:24px}.hero,.section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 0;padding:0;list-style:none}.steps li,.card{background:var(--band);border:1px solid var(--line);border-radius:10px;padding:15px}.steps strong{display:block;margin-bottom:5px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.lane-list{display:grid;gap:9px;margin-top:15px}.lane{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;background:var(--band)}.lane strong{color:var(--deep)}dl{margin:12px 0 0}.control{display:grid;grid-template-columns:150px 1fr;gap:15px;padding:11px 0;border-bottom:1px solid var(--line)}dt{font-weight:780}dd{margin:0;color:#3e4d60}.note{margin:16px 0 0;padding:14px 16px;border-left:4px solid var(--accent);background:#eef5fc}.boundary{background:#fff8e8;border-color:#ead6a4}.footer{max-width:var(--max);margin:0 auto;padding:0 24px 28px;color:var(--muted);font-size:14px}
+    @media(max-width:720px){.topbar{padding:18px 16px}.topbar-inner{display:block}.actions{margin-top:14px}main{padding:16px}.steps,.grid{grid-template-columns:1fr}.control,.lane{grid-template-columns:1fr;gap:3px}.hero,.section{padding:17px}h1{font-size:25px}.footer{padding:0 16px 24px}}
   </style>
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-inner">
     <div>
-      <p class="kicker">Value Action research interface</p>
-      <h1>Value Feature Browser Guide</h1>
-      <p class="lede">How to move from one value and action-choice question to ranked features and feature-level evidence.</p>
+      <p class="kicker">Value Action · Interactive research artifact</p>
+      <h1>How to Read the Value–Action Feature Atlas</h1>
+      <p class="lede">A plain-language guide to what the atlas investigates, what each evidence stage means, and how to interpret a feature without overclaiming.</p>
     </div>
     <nav class="actions" aria-label="Guide navigation">
-      <a class="button primary" href="index.html">Open the browser</a>
-      <a class="button" href="../">Back to portfolio</a>
+      <a class="button primary" href="index.html">Open the atlas</a>
+      <a class="button" href="https://ritengzhang77-max.github.io/#research">Back to profile</a>
     </nav>
   </div>
 </header>
 <main>
   <section class="hero" aria-labelledby="purpose">
-    <p class="kicker">Purpose</p>
-    <h2 id="purpose">Inspect Task2 action-choice evidence without treating one score as a complete explanation.</h2>
-    <p>The browser organizes features associated with which concrete action the model chooses. Use the filters to narrow the ranked rows, then select a feature to inspect its interpretation, validation fields, and concrete examples.</p>
+    <p class="kicker">Research question</p>
+    <h2 id="purpose">Which internal features help explain how a language model chooses between concrete actions that support or conflict with a human value—and which features have causal influence?</h2>
+    <p>Models can describe values abstractly, but their concrete choices may reveal different priorities. Across 56 human values, this atlas brings together feature rankings, interpretations, real examples, and causal tests in one inspectable interface.</p>
     <ol class="steps">
-      <li><strong>1. Choose a value and question.</strong><span>Select one of the 56 values, then choose the observational or causal evidence stage you want to inspect.</span></li>
-      <li><strong>2. Narrow the rows.</strong><span>Use direction, site, interpretation, artifact, and search filters. Top K controls how many ranked rows appear.</span></li>
-      <li><strong>3. Open a feature.</strong><span>Select a row and read the detail panel, examples, and causal fields before drawing a substantive conclusion.</span></li>
+      <li><strong>1. Choose a value.</strong><span>Select a value such as Social Power, Equality, or Helpful.</span></li>
+      <li><strong>2. Choose the evidence.</strong><span>Use an association screen (S1–S3) or a causal validation stage (V1–V2).</span></li>
+      <li><strong>3. Inspect a feature.</strong><span>Read its interpretation, examples, warnings, and available intervention evidence together.</span></li>
     </ol>
-    <img class="preview" src="browser-overview.png" alt="Value Feature Browser with controls, a ranked feature table, and a feature-detail panel" />
   </section>
 
-  <section class="section" aria-labelledby="questions">
+  <section class="section" aria-labelledby="dataset-credit">
+    <p class="kicker">Dataset and attribution</p>
+    <h2 id="dataset-credit">This work starts from ValueActionLens</h2>
+    <p><strong>ValueActionLens</strong> was introduced by <strong>Hua Shen, Nicholas Clark, and Tanu Mitra</strong> in <em>“Mind the Value-Action Gap: Do LLMs Act in Alignment with Their Values?”</em>, an <strong>EMNLP 2025 Outstanding Paper</strong>. The framework compares what language models say they value with the actions they choose in concrete scenarios. Its dataset contains 14.8K value-informed actions across 12 cultures and 11 social topics.</p>
+    <p>This atlas focuses on the action-choice setting across the same 56 values from Schwartz’s Theory of Basic Values and extends that behavioral starting point with sparse-feature interpretation and causal intervention tests.</p>
+    <p><a class="button" href="https://aclanthology.org/2025.emnlp-main.154/" target="_blank" rel="noopener noreferrer">Read the original ValueActionLens paper</a></p>
+  </section>
+
+  <section class="section" aria-labelledby="stages">
     <p class="kicker">Evidence stages</p>
-    <h2 id="questions">What the Question menu changes</h2>
-    <p>The interface retains the project's original Q labels. The current evidence-lane names are shown in parentheses.</p>
+    <h2 id="stages">One public vocabulary: S1–S3 for discovery, V1–V2 for causal validation</h2>
     <div class="lane-list">
-      <div class="lane"><strong>Q1 · S1</strong><span>Answer-site screen at the token where the model expresses its action choice.</span></div>
-      <div class="lane"><strong>Q2 · S2</strong><span>Content-span screen over the option or value text.</span></div>
-      <div class="lane"><strong>Q3_action · V1</strong><span>Single-feature causal test at the action site.</span></div>
-      <div class="lane"><strong>Q3_preanswer · V1</strong><span>Single-feature causal test immediately before the answer.</span></div>
-      <div class="lane"><strong>Q4_action · V2</strong><span>Bundle/Shapley causal test at the action site.</span></div>
-      <div class="lane"><strong>Q4_preanswer · V2</strong><span>Bundle/Shapley causal test immediately before the answer.</span></div>
-      <div class="lane"><strong>Q5 · S3</strong><span>Pre-answer probe/influence screen.</span></div>
+      <div class="lane"><strong>S1</strong><span><b>Answer-site association.</b> Ranks features associated with the model’s choice at the answer token.</span></div>
+      <div class="lane"><strong>S2</strong><span><b>Content-span association.</b> Ranks features active while the model processes the two action descriptions.</span></div>
+      <div class="lane"><strong>S3</strong><span><b>Pre-answer contribution.</b> Estimates which features contribute to the choice immediately before the answer.</span></div>
+      <div class="lane"><strong>V1</strong><span><b>Single-feature intervention.</b> Tests whether manipulating one feature changes support for an action.</span></div>
+      <div class="lane"><strong>V2</strong><span><b>Feature-group intervention.</b> Tests the joint effect of a related group of features.</span></div>
     </div>
+    <p class="note"><strong>Key distinction:</strong> S1–S3 identify candidate relationships. V1–V2 test causal influence. A high association score is useful discovery evidence, but it is not causal proof by itself.</p>
   </section>
 
   <section class="section" aria-labelledby="controls">
-    <p class="kicker">Control reference</p>
-    <h2 id="controls">What each control does</h2>
+    <p class="kicker">Using the atlas</p>
+    <h2 id="controls">What the visible controls mean</h2>
     <dl>
-      <div class="control"><dt>Value</dt><dd>Selects one value item and its value family. The production browser contains 56 values.</dd></div>
-      <div class="control"><dt>Direction</dt><dd>Switches between features ranked for Option1 and Option2 support.</dd></div>
-      <div class="control"><dt>Site</dt><dd>Restricts the activation location, such as the answer-choice token, option spans, action sites, or pre-answer site.</dd></div>
-      <div class="control"><dt>Category</dt><dd>Filters the broad interpretation class: semantic-ish, mixed/uncertain, scaffold/syntax, or format/scaffold.</dd></div>
-      <div class="control"><dt>Manual Interest</dt><dd>Filters Hermes/manual-review judgments, including strong or moderate semantic interest, confound/control, not semantic, and unclear.</dd></div>
-      <div class="control"><dt>Moral Primary</dt><dd>Filters the moral-primary audit tier, from stronger moral-semantic candidates through global/dataset semantic, scaffold/control, and low-priority uncertain tiers.</dd></div>
-      <div class="control"><dt>Artifact</dt><dd>Shows or hides rows flagged by artifact checks.</dd></div>
-      <div class="control"><dt>Top K</dt><dd>Controls the number of ranked feature rows shown after filtering.</dd></div>
-      <div class="control"><dt>Search</dt><dd>Matches a feature ID or words in the feature explanation.</dd></div>
+      <div class="control"><dt>Human value</dt><dd>Selects one of the 56 value items and its broader value family.</dd></div>
+      <div class="control"><dt>Evidence stage</dt><dd>Moves between the three association screens and two causal validation stages.</dd></div>
+      <div class="control"><dt>Ranked for</dt><dd>Switches between features associated with Action 1 and Action 2.</dd></div>
+      <div class="control"><dt>Model location</dt><dd>Restricts where the feature was measured, such as an action span, answer token, or the state immediately before the answer.</dd></div>
+      <div class="control"><dt>Feature type</dt><dd>Separates stronger value-related interpretations from broader semantic features, formatting controls, and uncertain cases.</dd></div>
+      <div class="control"><dt>Warnings</dt><dd>Shows whether a feature may reflect a scaffold, formatting pattern, or other artifact rather than the value itself.</dd></div>
+      <div class="control"><dt>Search</dt><dd>Finds a feature ID or a word in the interpretation.</dd></div>
     </dl>
   </section>
 
-  <section class="section" aria-labelledby="panels">
-    <p class="kicker">Reading the result</p>
-    <h2 id="panels">Ranked rows, summary cards, and feature detail</h2>
+  <section class="section" aria-labelledby="reading">
+    <p class="kicker">Reading a feature</p>
+    <h2 id="reading">Use four pieces of evidence together</h2>
     <div class="grid">
-      <article class="card"><h3>Summary cards</h3><p><strong>Family</strong> names the value family; <strong>Examples</strong> reports the value-level sample count; <strong>Variant B</strong> shows response balance; <strong>Q3/Q4</strong> reports available causal bundles.</p></article>
-      <article class="card"><h3>Top Features</h3><p>Each row reports rank, feature ID, score, rate information, selected sites, manual/Hermes interpretation, and moral-primary audit label. Select a row to open it.</p></article>
-      <article class="card"><h3>Feature Detail</h3><p>The detail panel exposes the selected feature's score, rates, bundle information, rank fields, interpretation labels, artifact warnings, and available support level.</p></article>
-      <article class="card"><h3>Examples and causal evidence</h3><p>Concrete activation/corpus examples help check what the feature responds to. Q3/Q4 fields are the causal lane; observational ranking alone is not proof of mechanism.</p></article>
+      <article class="card"><h3>1. Ranked feature</h3><p>The score shows how strongly the feature appears in the selected evidence stage. Compare scores only within the current selection.</p></article>
+      <article class="card"><h3>2. Interpretation</h3><p>The explanation summarizes the contexts in which the feature activates. The feature-type label and warning indicate how literally to read it.</p></article>
+      <article class="card"><h3>3. Concrete examples</h3><p>Value-choice and broader-text examples reveal whether the interpretation matches actual activations rather than only a short label.</p></article>
+      <article class="card"><h3>4. Causal evidence</h3><p>When available, intervention results show whether changing the feature or feature group changes support for an action or flips the choice.</p></article>
     </div>
-    <p class="note"><strong>Interpretation rule:</strong> read the semantic explanation, artifact warning, examples, and causal fields together. A high observational score is a discovery signal—not sufficient causal evidence by itself.</p>
+    <p class="note boundary"><strong>Scope:</strong> This atlas is an auditable research interface, not a definitive moral profile of the model. Individual features can encode semantics, decision scaffolding, or dataset regularities, so conclusions should combine examples, warnings, and causal validation.</p>
   </section>
 </main>
 <p class="footer">Riteng (Gavin) Zhang · Value Action research interface</p>
